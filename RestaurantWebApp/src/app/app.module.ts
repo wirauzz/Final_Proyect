@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { RestaurantItemComponent } from './restaurant-item/restaurant-item.component';
+import { RestaurantItemComponent } from './components/restaurant-item/restaurant-item.component';
+import { RestaurantsComponent } from './components/restaurants/restaurants.component';
+import { DishesComponent } from './components/dishes/dishes.component';
+import { DishItemComponent } from './components/dish-item/dish-item.component';
+import { AddRestaurantComponent } from './components/add-restaurant/add-restaurant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    RestaurantItemComponent
+    RestaurantItemComponent,
+    RestaurantsComponent,
+    DishesComponent,
+    DishItemComponent,
+    AddRestaurantComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
