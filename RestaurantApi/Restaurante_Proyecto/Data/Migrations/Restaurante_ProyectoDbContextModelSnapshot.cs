@@ -27,6 +27,8 @@ namespace Restaurante_Proyecto.Data.Migrations
 
                     b.Property<double>("Cost");
 
+                    b.Property<string>("ImagePath");
+
                     b.Property<string>("MainIngredient");
 
                     b.Property<string>("Name")
@@ -55,6 +57,8 @@ namespace Restaurante_Proyecto.Data.Migrations
                     b.Property<int>("AddressNumber");
 
                     b.Property<string>("FoodStyle");
+
+                    b.Property<string>("ImagePath");
 
                     b.Property<string>("Name")
                         .IsRequired();

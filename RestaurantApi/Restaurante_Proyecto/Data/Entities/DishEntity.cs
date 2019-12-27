@@ -19,6 +19,7 @@ namespace Restaurante_Proyecto.Data.Entities
         public string Nationality { get; set; }
         public double Cost { get; set; }
         public string Size { get; set; }
+        public string ImagePath { get; set; }
         [ForeignKey("RestaurantId")]
         public virtual RestaurantEntity Restaurant { get; set; }
     }

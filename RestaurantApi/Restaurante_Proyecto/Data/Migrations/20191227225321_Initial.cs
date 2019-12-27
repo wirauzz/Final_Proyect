@@ -16,7 +16,8 @@ namespace Restaurante_Proyecto.Data.Migrations
                     Name = table.Column<string>(nullable: false),
                     FoodStyle = table.Column<string>(nullable: true),
                     Street = table.Column<string>(nullable: false),
-                    AddressNumber = table.Column<int>(nullable: false)
+                    AddressNumber = table.Column<int>(nullable: false),
+                    ImagePath = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -34,6 +35,7 @@ namespace Restaurante_Proyecto.Data.Migrations
                     Nationality = table.Column<string>(nullable: false),
                     Cost = table.Column<double>(nullable: false),
                     Size = table.Column<string>(nullable: true),
+                    ImagePath = table.Column<string>(nullable: true),
                     RestaurantId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>

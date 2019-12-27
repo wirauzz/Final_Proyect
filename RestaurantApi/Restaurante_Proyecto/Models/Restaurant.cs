@@ -17,5 +17,6 @@ namespace Restaurante_Proyecto.Models
         [Range(1, 9999,ErrorMessage ="The city does not allow this")]
         public int AddressNumber { get; set; }
         public IEnumerable<Dish> Dishes { get; set; }
+        public string ImagePath { get; set; }
     }
 }

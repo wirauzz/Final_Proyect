@@ -10,7 +10,7 @@ using Restaurante_Proyecto.Data;
 namespace Restaurante_Proyecto.Data.Migrations
 {
     [DbContext(typeof(Restaurante_ProyectoDbContext))]
-    [Migration("20191020224739_Initial")]
+    [Migration("20191227225321_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,6 +28,8 @@ namespace Restaurante_Proyecto.Data.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<double>("Cost");
+
+                    b.Property<string>("ImagePath");
 
                     b.Property<string>("MainIngredient");
 
@@ -57,6 +59,8 @@ namespace Restaurante_Proyecto.Data.Migrations
                     b.Property<int>("AddressNumber");
 
                     b.Property<string>("FoodStyle");
+
+                    b.Property<string>("ImagePath");
 
                     b.Property<string>("Name")
                         .IsRequired();

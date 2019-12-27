@@ -17,6 +17,7 @@ namespace Restaurante_Proyecto.Data.Entities
         [Required]
         public string Street { get; set; }
         public int AddressNumber { get; set; }
-        public ICollection<DishEntity> Dishes { get; set; }
+        public string ImagePath { get; set; }
+        public ICollection<DishEntity> Dishes { get; set; } 
     }
 }

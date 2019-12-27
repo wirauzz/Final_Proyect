@@ -88,6 +88,7 @@ namespace Restaurante_Proyecto.Data.Repository
             restaurantToUpdate.Street = restaurant.Street;
             restaurantToUpdate.AddressNumber = restaurant.AddressNumber;
             restaurantToUpdate.FoodStyle = restaurant.FoodStyle;
+            restaurantToUpdate.ImagePath = restaurant.ImagePath;
         }
 
         public void UpdateDish(DishEntity dish)
@@ -98,6 +99,7 @@ namespace Restaurante_Proyecto.Data.Repository
             dishToUpdate.Nationality = dish.Nationality;
             dishToUpdate.Size = dish.Size;
             dishToUpdate.Cost = dish.Cost;
+            dishToUpdate.ImagePath = dish.ImagePath;
         }
     }
 }

@@ -18,5 +18,6 @@ namespace Restaurante_Proyecto.Models
         public double Cost { get; set; }
         public string Size { get; set; }
         public int? RestautantId { get; set; }
+        public string ImagePath { get; set; }
     }
 }
