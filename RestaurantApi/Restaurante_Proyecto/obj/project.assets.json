@@ -13133,11 +13133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Proyecto_Final_Tec_Web\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+      "projectUniqueName": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
       "projectName": "Restaurante_Proyecto",
-      "projectPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Proyecto_Final_Tec_Web\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+      "projectPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
       "packagesPath": "C:\\Users\\wrami\\.nuget\\packages\\",
-      "outputPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Proyecto_Final_Tec_Web\\RestaurantApi\\Restaurante_Proyecto\\obj\\",
+      "outputPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
