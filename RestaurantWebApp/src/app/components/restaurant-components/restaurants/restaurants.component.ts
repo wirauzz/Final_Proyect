@@ -29,4 +29,14 @@ export class RestaurantsComponent implements OnInit {
     });
   }
 
+  editRestaurant(restaurant:Restaurant)
+  {
+    this.restaurantService.putRestaurant(restaurant).subscribe();
+  }
+
+  getDishes(restaurant:Restaurant)
+  {
+    
+  }
+
 }

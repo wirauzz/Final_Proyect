@@ -11,6 +11,7 @@ import { RestaurantService } from 'src/app/services/restaurant.service';
 export class RestaurantItemComponent implements OnInit {
   @Input() restaurant:Restaurant;
   @Output() deleteRestaurant:EventEmitter<Restaurant> = new EventEmitter();
+  @Output() getDishes:EventEmitter<Restaurant> = new EventEmitter();
 
   constructor(private restaurantService:RestaurantService) { }
 
@@ -21,6 +22,9 @@ export class RestaurantItemComponent implements OnInit {
     this.deleteRestaurant.emit(restaurant);
   }
 
+  onRedirect(restaurant) { 
+    this.getDishes.emit(restaurant);
+  }
 
 
 }

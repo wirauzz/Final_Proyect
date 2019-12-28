@@ -30,13 +30,18 @@ export class RestaurantService {
     return this.Http.delete(url, httpOptions);
   }
   
-  updateRestaurant(restaurant:Restaurant):Observable<any> { 
+  /*updateRestaurant(restaurant:Restaurant):Observable<any> { 
     const url = `${this.restaurantUrl}/${restaurant.id}`;
     return this.Http.put(url, restaurant);
-  }
+  }*/
   
   addRestaurant(restaurant:Restaurant):Observable<Restaurant> {
     return this.Http.post<Restaurant>(this.restaurantUrl,restaurant,httpOptions); 
+  }
+
+  putRestaurant(restaurant:Restaurant):Observable<Restaurant> {
+    const url = `${this.restaurantUrl}/${restaurant.id}`;
+    return this.Http.put<Restaurant>(url,restaurant,httpOptions); 
   }
 
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { Restaurant } from 'src/app/models/restaurant';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -12,6 +11,7 @@ export class AddRestaurantComponent implements OnInit {
   foodStyle:string;
   street:string;
   addressNumber:number;
+  filePath:File;
   constructor() { }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class AddRestaurantComponent implements OnInit {
       foodStyle: this.foodStyle,
       street: this.street,
       addressNumber: this.addressNumber,
-      completed:false
+      filePath:this.filePath
     }
     this.addRestaurant.emit(restaurant);
   }
