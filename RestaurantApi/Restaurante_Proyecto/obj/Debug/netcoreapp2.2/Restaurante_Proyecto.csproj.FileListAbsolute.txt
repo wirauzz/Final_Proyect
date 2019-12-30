@@ -52,3 +52,17 @@ C:\Users\wrami\Downloads\Restaurante_Proyecto\Restaurante_Proyecto\obj\Debug\net
 C:\Users\wrami\Downloads\Restaurante_Proyecto\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.RazorTargetAssemblyInfo.cache
 C:\Users\wrami\Downloads\Restaurante_Proyecto\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.dll
 C:\Users\wrami\Downloads\Restaurante_Proyecto\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.pdb
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.csprojAssemblyReference.cache
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.RazorAssemblyInfo.cache
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.RazorAssemblyInfo.cs
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.AssemblyInfoInputs.cache
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.AssemblyInfo.cs
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.dll
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.pdb
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.deps.json
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.runtimeconfig.json
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.runtimeconfig.dev.json
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.dll
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.pdb
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.csproj.CoreCompileInputs.cache
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.RazorTargetAssemblyInfo.cache
