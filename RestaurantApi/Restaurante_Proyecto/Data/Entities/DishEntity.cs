@@ -22,5 +22,6 @@ namespace Restaurante_Proyecto.Data.Entities
         public string ImagePath { get; set; }
         [ForeignKey("RestaurantId")]
         public virtual RestaurantEntity Restaurant { get; set; }
+        //we got a problem, database is taking all as nothing 
     }
 }

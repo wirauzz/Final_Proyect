@@ -13,6 +13,8 @@ namespace Restaurante_Proyecto.Services
         Task<bool> DeleteDish(int idRestaurant, int idDish);
         Task<Dish> CreateDishAsync(int idRestaurant, Dish dish);
         Task<Dish> UpdateDishAsync(int idRestaurant, int idDish, Dish dish);
+        Task<IEnumerable<Dish>> GetAllDishesAsync();
+
 
     }
 }

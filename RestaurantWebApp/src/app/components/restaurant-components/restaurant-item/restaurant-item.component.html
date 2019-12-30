@@ -6,7 +6,7 @@
         <td> {{ restaurant.addressNumber }}</td>   
         <td> {{ restaurant.imagePath }}</td>   
          
-        <td><button (click)="onRedirect(restaurant)" class='redirect'>Dishes</button></td>
+        <td><button (click)="onRedirect(restaurant)" class='redirect'><a routerLink="/dishes">View Dishes</a></button></td>
         <td><button (click)="onDelete(restaurant)" class='delete'>Delete Restaurant</button></td>
     </tr>
 </table>

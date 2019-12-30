@@ -33,10 +33,4 @@ export class RestaurantsComponent implements OnInit {
   {
     this.restaurantService.putRestaurant(restaurant).subscribe();
   }
-
-  getDishes(restaurant:Restaurant)
-  {
-    
-  }
-
 }

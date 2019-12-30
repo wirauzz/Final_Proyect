@@ -26,6 +26,11 @@ namespace Restaurante_Proyecto.Data.Repository
         void CreateDish(DishEntity dish);
         void UpdateDish(DishEntity dish);
 
+        Task DeleteDishWithRestaurantId(int idRestaurant);
+
+        //Exceptional Dish Method -> Get all Dishes from DB
+        Task<IEnumerable<DishEntity>> GetAllDishes();
+
         void DetachEntity<T>(T entity) where T : class;
     }
 }

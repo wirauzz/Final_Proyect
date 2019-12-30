@@ -18,7 +18,8 @@ namespace Restaurante_Proyecto.Controllers
         {
             this.dishService = dishService;
         }
-        // GET: api/Dish
+        
+        // GET: api/Restaurant/1/Dish
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Dish>>> GetDishes(int restaurantId)
         {
@@ -70,7 +71,6 @@ namespace Restaurante_Proyecto.Controllers
                 throw new Exception("Not possible to show");
             }
         }
-
         [HttpDelete("{id:int}")]
         public async Task<ActionResult<bool>> DeleteDish(int id, int restaurantId)
         {

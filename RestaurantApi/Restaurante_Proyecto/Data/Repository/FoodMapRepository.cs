@@ -42,6 +42,7 @@ namespace Restaurante_Proyecto.Data.Repository
         public async Task DeleteRestaurantAsync(int id)
         {
             var restaurantToDelete = await dbContext.Restaurants.SingleAsync(r => r.Id == id);
+            await DeleteDishWithRestaurantId(id);
             dbContext.Restaurants.Remove(restaurantToDelete);
         }
 
@@ -100,6 +101,22 @@ namespace Restaurante_Proyecto.Data.Repository
             dishToUpdate.Size = dish.Size;
             dishToUpdate.Cost = dish.Cost;
             dishToUpdate.ImagePath = dish.ImagePath;
+        }
+
+        public async Task<IEnumerable<DishEntity>> GetAllDishes()
+        {
+            IQueryable<DishEntity> query = dbContext.Dishes;
+            query = query.AsNoTracking();
+            return await query.ToArrayAsync();
+        }
+
+        public async Task DeleteDishWithRestaurantId(int idRestaurant)
+        {
+            var dishesFromRestaurant = dbContext.Dishes.Where(d => d.Restaurant.Id == idRestaurant);
+            foreach (DishEntity de in dishesFromRestaurant)
+            {
+                await DeleteDishAsync(de.Id);
+            }
         }
     }
 }

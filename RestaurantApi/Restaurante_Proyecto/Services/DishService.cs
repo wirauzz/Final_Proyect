@@ -98,5 +98,27 @@ namespace Restaurante_Proyecto.Services
             foodRepository.DetachEntity(restaurant);
             return restaurant;
         }
+
+        public async Task<IEnumerable<Dish>> GetAllDishesAsync()
+        {
+            var allDishesEntities = await foodRepository.GetAllDishes();
+            var restaurantsId = new List<int>();
+            /*
+            foreach(DishEntity d in allDishesEntities)
+            {
+                restaurantsId.Add(d.Restaurant.Id);
+            }
+            */
+            var allDishes = mapper.Map<IEnumerable<Dish>>(allDishesEntities);
+            /*
+            var i = 0;
+            foreach(Dish d in allDishes)
+            {
+                d.RestautantId = restaurantsId[i];
+                i++;
+            }
+            */
+            return allDishes;
+        }
     }
 }
