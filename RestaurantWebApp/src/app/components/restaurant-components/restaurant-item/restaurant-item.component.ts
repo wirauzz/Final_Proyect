@@ -1,6 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
-import { RestaurantService } from 'src/app/services/restaurant.service';
+import { Router } from '@angular/router';
+import { SharingService } from '../../../services/sharing.service';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class RestaurantItemComponent implements OnInit {
   @Output() deleteRestaurant:EventEmitter<Restaurant> = new EventEmitter();
   @Output() getDishesFromRestaurant:EventEmitter<Restaurant> = new EventEmitter();
 
-  constructor(private restaurantService:RestaurantService) { }
+  constructor(private router:Router, private sharingService:SharingService) { }
 
   ngOnInit() {
   }
@@ -23,7 +24,8 @@ export class RestaurantItemComponent implements OnInit {
   }
 
   onRedirect(restaurant) { 
-    this.getDishesFromRestaurant.emit(restaurant);
+    this.sharingService.setData(restaurant);
+    this.router.navigate(["/dishes"]);//redirects url to new component
   }
 
 

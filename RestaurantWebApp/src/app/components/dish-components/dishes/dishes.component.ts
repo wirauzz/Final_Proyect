@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from 'src/app/services/dish.service';
 import { Dish } from 'src/app/models/dish';
+import { SharingService } from '../../../services/sharing.service'
+import { Restaurant } from 'src/app/models/restaurant';
 
 
 @Component({
@@ -10,10 +12,13 @@ import { Dish } from 'src/app/models/dish';
 })
 export class DishesComponent implements OnInit {
   dishes:Dish[];
-  constructor(private dishService:DishService) { }
+  restaurant:Restaurant;
+
+  constructor(private dishService:DishService, private sharingService:SharingService) { }
 
   ngOnInit() {
-    this.dishService.getDishes(2).subscribe(dishes => {
+    this.restaurant = this.sharingService.getData();
+    this.dishService.getDishes(this.restaurant.id).subscribe(dishes => {
       this.dishes = dishes;
     });
   }
