@@ -30,6 +30,8 @@ export class RestaurantsComponent implements OnInit {
   }
 
   editRestaurant(restaurant:Restaurant)  {
-    this.restaurantService.putRestaurant(restaurant).subscribe();
+    this.restaurantService.putRestaurant(restaurant).subscribe(restaurant => {
+      this.restaurants[this.restaurants.findIndex( r => r.id == restaurant.id)] = restaurant
+    });
   }
 }

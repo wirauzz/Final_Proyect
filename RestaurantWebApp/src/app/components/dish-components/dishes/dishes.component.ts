@@ -18,4 +18,16 @@ export class DishesComponent implements OnInit {
     });
   }
 
+  addDish(dish:Dish) { 
+    this.dishService.addDish(dish, dish.restaurantId).subscribe(dish => {
+      this.dishes.push(dish);
+    });
+  }
+
+  editDish(dish:Dish) {
+    this.dishService.putDish(dish,dish.restaurantId).subscribe(dish => {
+      this.dishes[this.dishes.findIndex( d => d.id = dish.id)] = dish;
+    })
+  }
+
 }

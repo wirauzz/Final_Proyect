@@ -11,7 +11,7 @@ export class AddRestaurantComponent implements OnInit {
   foodStyle:string;
   street:string;
   addressNumber:number;
-  filePath:File;
+  filePath:string;
   constructor() { }
 
   ngOnInit() {

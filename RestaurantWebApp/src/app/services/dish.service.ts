@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Dish } from '../models/dish';
-import { Restaurant } from '../models/restaurant';
 
 
 
@@ -33,7 +32,7 @@ export class DishService {
   
   addDish(dish:Dish,idRestaurant:number):Observable<Dish> {
     const url = `${this.dishUrl}/${idRestaurant}/Dish`;
-    return this.Http.post<Dish>(this.dishUrl,dish,httpOptions); 
+    return this.Http.post<Dish>(url,dish,httpOptions); 
   }
 
   putDish(dish:Dish,idRestaurant:number):Observable<Dish> {
