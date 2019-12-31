@@ -14,6 +14,8 @@ import { EditRestaurantComponent } from './components/restaurant-components/edit
 import { HeaderComponent } from './components/layout/header/header.component';
 import { DishesPageComponent } from './components/pages/dishes-page/dishes-page.component';
 import { RestaurantsPageComponent } from './components/pages/restaurants-page/restaurants-page.component';
+import { AddDishComponent } from './components/dish-components/add-dish/add-dish.component';
+import { EditDishComponent } from './components/dish-components/edit-dish/edit-dish.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { RestaurantsPageComponent } from './components/pages/restaurants-page/re
     EditRestaurantComponent,
     HeaderComponent,
     DishesPageComponent,
-    RestaurantsPageComponent
+    RestaurantsPageComponent,
+    AddDishComponent,
+    EditDishComponent
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class EditRestaurantComponent implements OnInit {
   foodStyle:string;
   street:string;
   addressNumber:number;
-  filePath:File;
+  imagePath:string;
   constructor() { }
 
   ngOnInit() {
@@ -25,7 +25,7 @@ export class EditRestaurantComponent implements OnInit {
       foodStyle: this.foodStyle,
       street: this.street,
       addressNumber: this.addressNumber,
-      filePath:this.filePath
+      imagePath:this.imagePath
     }
     this.editRestaurant.emit(restaurant);
   }

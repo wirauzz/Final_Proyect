@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Dish } from '../models/dish';
-import { Restaurant } from '../models/restaurant';
 
 
 
@@ -22,22 +21,22 @@ export class DishService {
 
   //get restaurants
 
-  getDishes(restaurant:Restaurant):Observable<Dish[]> {
-    return this.Http.get<Dish[]>(`${this.dishUrl}/${restaurant.id}/Dish`);
+  getDishes(idRestaurant:number):Observable<Dish[]> {
+    return this.Http.get<Dish[]>(`${this.dishUrl}/${idRestaurant}/Dish`);
   }
 
-  deleteDish(dish:Dish,restaurant:Restaurant):Observable<any> {
-    const url = `${this.dishUrl}/${restaurant.id}/Dish/${dish.id}`;
+  deleteDish(dish:Dish,idRestaurant:number):Observable<any> {
+    const url = `${this.dishUrl}/${idRestaurant}/Dish/${dish.id}`;
     return this.Http.delete(url, httpOptions);
   }
   
-  addDish(dish:Dish,restaurant:Restaurant):Observable<Dish> {
-    const url = `${this.dishUrl}/${restaurant.id}/Dish`;
-    return this.Http.post<Dish>(this.dishUrl,dish,httpOptions); 
+  addDish(dish:Dish,idRestaurant:number):Observable<Dish> {
+    const url = `${this.dishUrl}/${idRestaurant}/Dish`;
+    return this.Http.post<Dish>(url,dish,httpOptions); 
   }
 
-  putDish(dish:Dish,restaurant:Restaurant):Observable<Dish> {
-    const url = `${this.dishUrl}/${restaurant.id}/Dish/${dish.id}`;
+  putDish(dish:Dish,idRestaurant:number):Observable<Dish> {
+    const url = `${this.dishUrl}/${idRestaurant}/Dish/${dish.id}`;
     return this.Http.put<Dish>(url,dish,httpOptions); 
   }
 }

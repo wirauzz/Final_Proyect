@@ -1,12 +1,18 @@
-<table style="width:100%">
+<!-- <table style="width:100%">
     <tr>
-        <td> {{ restaurant.name }}</td>
+        <td> </td>
         <td> {{ restaurant.foodStyle }}</td>
-        <td> {{ restaurant.street }}</td>
-        <td> {{ restaurant.addressNumber }}</td>   
-        <td> {{ restaurant.imagePath }}</td>   
-         
-        <td><button (click)="onRedirect(restaurant)" class='redirect'><a routerLink="/dishes">View Dishes</a></button></td>
+        <td> </td>
+        <td> </td>   
+        <td></td>   
+<td><button (click)="onRedirect(restaurant)" class='redirect'><a routerLink="/dishes">View Dishes</a></button></td>
         <td><button (click)="onDelete(restaurant)" class='delete'>Delete Restaurant</button></td>
     </tr>
-</table>
+</table> -->
+
+<div>
+    <li> {{ restaurant.name }} | {{ restaurant.foodStyle }} | {{ restaurant.street }} | {{ restaurant.addressNumber }} |  <img src="{{ restaurant.imagePath }}"> </li>
+    <td><button (click)="onRedirect(restaurant)" class='redirect'><a routerLink="/dishes">View Dishes</a></button></td>
+    <td><button (click)="onDelete(restaurant)" class='delete'>Delete Restaurant</button></td>
+
+</div>
