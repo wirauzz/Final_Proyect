@@ -12,14 +12,13 @@ const httpOptions = {
 
 
 @Injectable({
-  providedIn: 'root' 
+  providedIn: 'root'
 })
 export class RestaurantService {
 
   restaurantUrl:string = 'https://localhost:44347/api/Restaurant';
+  currentRestaurant:Restaurant;
   constructor(private Http:HttpClient) { }
-
-  //get restaurants
 
   getRestaurants():Observable<Restaurant[]> {
     return this.Http.get<Restaurant[]>(`${this.restaurantUrl}`);

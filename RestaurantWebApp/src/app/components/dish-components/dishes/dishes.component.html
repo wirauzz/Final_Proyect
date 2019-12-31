@@ -1,1 +1,6 @@
-<p>dishes works!</p>
+
+<div>
+    <p>NAME | MAIN INGREDIENT | NATIONALITY | COST | SIZE | IMAGE</p>
+    
+    <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+</div>

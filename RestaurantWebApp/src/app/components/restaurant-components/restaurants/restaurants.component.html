@@ -1,14 +1,10 @@
 <div>
-    <table style="width:50%">
-        <tr>
-            <th>NAME</th>
-            <th>FOODSTYLE</th>
-            <th>STREET</th>
-            <th>ADDRESS NUMBER</th>
-            <th>IMAGE</th>
-        </tr>
-    </table>
-    <app-restaurant-item *ngFor="let restaurant of restaurants" [restaurant]="restaurant" (deleteRestaurant)="deleteRestaurant($event)" (getDishes)="getDishes($event)"></app-restaurant-item>
+    <div>
+        <p>NAME | FOOD STYLE | STREET | ADDRESS NUMBER | IMAGE</p>
+    </div>
+    <ul>
+        <app-restaurant-item *ngFor="let restaurant of restaurants" [restaurant]="restaurant" (deleteRestaurant)="deleteRestaurant($event)"></app-restaurant-item>
+    </ul>
     <br>
     <h1>Add restaurant</h1>
     <app-add-restaurant (addRestaurant)="addRestaurant($event)"></app-add-restaurant>
