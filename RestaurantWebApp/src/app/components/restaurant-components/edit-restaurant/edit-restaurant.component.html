@@ -1,0 +1,15 @@
+<form class="form" (ngSubmit)="onEdit()">
+    <input type="number" name="id" [(ngModel)]="id" placeholder="id of the restaurant">
+    <br>
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Name of the restaurant">
+    <br>
+    <input type="text" name="foodStyle" [(ngModel)]="foodStyle" placeholder="Fodd Style of the restaurant">
+    <br>
+    <input type="text" name="street" [(ngModel)]="street" placeholder="Location of the restaurant">
+    <br>
+    <input type="number" name="addressNumber" [(ngModel)]="addressNumber" placeholder="Address Number of the restaurant ">
+    <br>
+    <input type="text" name="imagePath" [(ngModel)]="imagePath" placeholder="Logo of the restaurant">
+    <br>
+    <input type="submit" value="submit" class="btn">
+</form>

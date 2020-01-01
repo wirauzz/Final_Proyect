@@ -1,0 +1,14 @@
+<div>
+    <div>
+        <p>NAME | FOOD STYLE | STREET | ADDRESS NUMBER | IMAGE</p>
+    </div>
+    <ul>
+        <app-restaurant-item *ngFor="let restaurant of restaurants" [restaurant]="restaurant" (deleteRestaurant)="deleteRestaurant($event)"></app-restaurant-item>
+    </ul>
+    <br>
+    <h1>Add restaurant</h1>
+    <app-add-restaurant (addRestaurant)="addRestaurant($event)"></app-add-restaurant>
+    <br>
+    <h1>Edit restaurant</h1>
+    <app-edit-restaurant (editRestaurant)="editRestaurant($event)"></app-edit-restaurant>      
+</div>
