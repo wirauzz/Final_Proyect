@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Restaurante_Proyecto.Exceptions;
 using Restaurante_Proyecto.Models;
 using Restaurante_Proyecto.Services;
 using System;
@@ -24,6 +26,10 @@ namespace Restaurante_Proyecto.Controllers
             try
             {
                 return Ok(await dishService.GetAllDishesAsync());
+            }
+            catch (NotFoundItemException ex)
+            {
+                return this.StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
             catch
             {

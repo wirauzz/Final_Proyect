@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Restaurante_Proyecto.Data.Entities;
 using Restaurante_Proyecto.Data.Repository;
+using Restaurante_Proyecto.Exceptions;
 using Restaurante_Proyecto.Models;
 
 namespace Restaurante_Proyecto.Services
@@ -23,7 +24,7 @@ namespace Restaurante_Proyecto.Services
             //var rest = ValidateRestaurant(idRestaurant);
             if(dish.RestautantId != null && idRestaurant != dish.RestautantId)
             {
-                throw new Exception("Non valid Restaurant");
+                throw new WrongOperationException("Restaurant from URL and the one specified in the id has to be the same");
             }
             dish.RestautantId = idRestaurant;
             var restaurantEntity = await ValidateRestaurant(idRestaurant);
@@ -35,7 +36,7 @@ namespace Restaurante_Proyecto.Services
             {
                 return mapper.Map<Dish>(dishEntity);
             }
-            throw new Exception("There was an error with the DB");
+            throw new ChangesNotExecutedException("There was an error including the Dish in the DB");
 
         }
 
@@ -54,7 +55,7 @@ namespace Restaurante_Proyecto.Services
             var dishEntity = await foodRepository.GetDishAsync(idDish);
             if(dishEntity == null)
             {
-                throw new Exception("Not Found");
+                throw new NotFoundItemException("The dish was not found in the DB");
             }
             var dish = mapper.Map<Dish>(dishEntity);
             dish.RestautantId = idRestaurant;
@@ -76,48 +77,42 @@ namespace Restaurante_Proyecto.Services
         {
             if(idDish !=dish.Id)
             {
-                throw new Exception("Id of the dish in URL needs to be the same that the object");
+                throw new WrongOperationException("Id of the dish in URL needs to be the same that the object");
             }
             var restaurant = await ValidateRestaurant(idRestaurant);
             if(idRestaurant!=restaurant.Id)
             {
-                throw new Exception("This restaurant has never met this dish");
+                throw new NotFoundItemException("This restaurant has never met this dish");
             }
             dish.Id = idDish;
             var dishEntity = mapper.Map<DishEntity>(dish);
             foodRepository.UpdateDish(dishEntity);
             if (await foodRepository.SaveChangesAsync())
                 return mapper.Map<Dish>(dishEntity);
-            throw new Exception("There was an error with the database");
+            throw new ChangesNotExecutedException("There was an error with the database");
         }
         public async Task<RestaurantEntity> ValidateRestaurant(int idRestaurant)
         {
             var restaurant = await foodRepository.GetRestaurantAsync(idRestaurant);
             if (restaurant == null)
-                throw new Exception("Not found");
+                throw new Exception("The Restaurant is not registrated in the DB");
             foodRepository.DetachEntity(restaurant);
             return restaurant;
         }
 
         public async Task<IEnumerable<Dish>> GetAllDishesAsync()
         {
-            var allDishesEntities = await foodRepository.GetAllDishes();
-            var restaurantsId = new List<int>();
-            /*
-            foreach(DishEntity d in allDishesEntities)
+            var allRestaurants = await foodRepository.GetRestaurantsAsync();
+            List<Dish> allDishes = new List<Dish>();
+            foreach(RestaurantEntity r in allRestaurants)
             {
-                restaurantsId.Add(d.Restaurant.Id);
+                var restaurantId = r.Id;
+                var dishes = await GetDishesAsync(restaurantId);
+                foreach(Dish d in dishes)
+                {
+                    allDishes.Add(d);
+                }   
             }
-            */
-            var allDishes = mapper.Map<IEnumerable<Dish>>(allDishesEntities);
-            /*
-            var i = 0;
-            foreach(Dish d in allDishes)
-            {
-                d.RestautantId = restaurantsId[i];
-                i++;
-            }
-            */
             return allDishes;
         }
     }

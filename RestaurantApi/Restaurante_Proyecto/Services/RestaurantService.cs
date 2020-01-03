@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Restaurante_Proyecto.Data.Entities;
 using Restaurante_Proyecto.Data.Repository;
+using Restaurante_Proyecto.Exceptions;
 using Restaurante_Proyecto.Models;
 
 namespace Restaurante_Proyecto.Services
@@ -26,7 +27,7 @@ namespace Restaurante_Proyecto.Services
             {
                 return mapper.Map<Restaurant>(restaurantEntity);
             }
-            throw new Exception("There was an error with the database");
+            throw new ChangesNotExecutedException("There was an error with the database");
         }
 
         public async Task<bool> DeleteRestaurantAsync(int id)
@@ -42,7 +43,7 @@ namespace Restaurante_Proyecto.Services
         {
             var restaurant = await foodRepository.GetRestaurantAsync(id);
             if (restaurant == null)
-                throw new Exception("Restaurant not found");
+                throw new NotFoundItemException("Restaurant not found");
             return mapper.Map<Restaurant>(restaurant);
         }
 
@@ -55,21 +56,21 @@ namespace Restaurante_Proyecto.Services
         public async Task<Restaurant> UpdateRestaurantAsync(int id, Restaurant restaurant)
         {
             if (id != restaurant.Id && restaurant.Id != null )
-                throw new Exception("URL id needs to be the same than the one sent");
+                throw new WrongOperationException("URL id needs to be the same than the one sent");
             await validateRestaurant(id);
             restaurant.Id = id;
             var restaurantEntity = mapper.Map<RestaurantEntity>(restaurant);
             foodRepository.UpdateRestaurant(id, restaurantEntity);
             if (await foodRepository.SaveChangesAsync())
                 return mapper.Map<Restaurant>(restaurantEntity);
-            throw new Exception("There was an error with the database");
+            throw new ChangesNotExecutedException("There was an error with the database");
         }
 
         private async Task validateRestaurant(int id)
         {
             var restaurant = await foodRepository.GetRestaurantAsync(id);
             if (restaurant == null)
-                throw new Exception("Cannot find the restaurant");
+                throw new NotFoundItemException("Cannot find the restaurant");
             foodRepository.DetachEntity(restaurant);
         }
 
