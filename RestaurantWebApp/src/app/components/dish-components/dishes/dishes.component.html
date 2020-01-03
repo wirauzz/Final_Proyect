@@ -1,8 +1,10 @@
 
 <div>
-    <p>NAME | MAIN INGREDIENT | NATIONALITY | COST | SIZE | IMAGE</p>
+    <!-- <p>NAME | MAIN INGREDIENT | NATIONALITY | COST | SIZE | IMAGE</p> -->
     
-    <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+    <div class="grid-container">
+        <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+    </div>
 
     <!-- <h1>Add Dish</h1>
     <app-add-dish (addDish)="addDish($event)"></app-add-dish>
