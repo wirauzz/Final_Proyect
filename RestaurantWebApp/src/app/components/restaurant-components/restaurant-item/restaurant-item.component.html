@@ -1,6 +1,19 @@
-<div>
-    <li> {{ restaurant.name }} | {{ restaurant.foodStyle }} | {{ restaurant.street }} | {{ restaurant.addressNumber }} |  <img src="{{ restaurant.imagePath }}"> </li>
+<!-- <div>
+    <li>  |  | {{ restaurant.street }} | {{ restaurant.addressNumber }} |  <img src="{{ restaurant.imagePath }}"> </li>
     <td><button (click)="onRedirect(restaurant)" class='redirect'>View Dishes</button></td>
     <td><button (click)="onDelete(restaurant)" class='delete'>Delete Restaurant</button></td>
 
-</div>
+</div> -->
+<div class="col-md-4">
+    <div class="portfolio-container">
+      <div class="portfolio-details">
+        <a href="#">
+          <h2>{{ restaurant.name }}</h2>
+        </a>
+        <a href="#">
+          <p>{{ restaurant.foodStyle }}</p>
+        </a>
+      </div>
+        <img src="{{ restaurant.imagePath }}" class="img-fluid" (click)="onRedirect(restaurant)">
+     </div>    
+ </div>

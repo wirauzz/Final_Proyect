@@ -14,10 +14,19 @@ export class DishesComponent implements OnInit {
   dishes:Dish[];
   restaurant:Restaurant;
 
-  constructor(private dishService:DishService, private sharingService:SharingService) { }
+  constructor(private dishService:DishService, private sharingService:SharingService) {
+   }
 
   ngOnInit() {
     this.restaurant = this.sharingService.getData();
+    if(this.restaurant != undefined)
+    { 
+      localStorage.setItem("restaurant", JSON.stringify(this.restaurant));
+    }
+    else
+    {
+      this.restaurant = JSON.parse(localStorage.getItem("restaurant"));
+    }
     this.dishService.getDishes(this.restaurant.id).subscribe(dishes => {
       this.dishes = dishes;
     });
