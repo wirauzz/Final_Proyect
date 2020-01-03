@@ -1,0 +1,19 @@
+<form class="form" (ngSubmit)="onEdit()">
+    <input type="number" name="id" [(ngModel)]="id" placeholder="id of the dish">
+    <br>
+    <input type="text" name="name" [(ngModel)]="name" placeholder="Name of the dish">
+    <br>
+    <input type="text" name="mainIngredient" [(ngModel)]="mainIngredient" placeholder="Main Ingredient of the dish">
+    <br>
+    <input type="text" name="nationality" [(ngModel)]="nationality" placeholder="Nationality of the dish">
+    <br>
+    <input type="number" name="cost" [(ngModel)]="cost" placeholder="cost of the dish ">
+    <br>
+    <input type="text" name="size" [(ngModel)]="size" placeholder="size of the dish">
+    <br>
+    <input type="text" name="imagePath" [(ngModel)]="imagePath" placeholder="Url image of the dish">
+    <br>
+    <input type="number" name="restaurantId" [(ngModel)]="restaurantId" placeholder="Id restaurant of the dish">
+    <br>
+    <input type="submit" value="submit" class="btn">
+</form>

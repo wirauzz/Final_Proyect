@@ -1,0 +1,3 @@
+<div class="row">         
+    <app-restaurant-item *ngFor="let restaurant of restaurants" [restaurant]="restaurant" (deleteRestaurant)="deleteRestaurant($event)"></app-restaurant-item>   
+</div>
