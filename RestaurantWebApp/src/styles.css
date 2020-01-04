@@ -182,17 +182,15 @@ li {
 .portfolio-container {
   position: relative;
   overflow: hidden;
-  margin: 20px 0;
-  border-radius: 2px;
-  width: 400px;
-  display: block;
+  margin: 10px 0px;
+  width: 250px;
 }
+
 .portfolio-container img {
   -moz-transition: all 0.8s;
   -webkit-transition: all 0.8s;
   transition: all 0.8s;
   width: 100%;
-  height: auto;
 }
 .portfolio-container:hover img {
   -moz-transform: scale(1.2);
@@ -201,8 +199,7 @@ li {
 }
 .portfolio-details {
   position: absolute;
-  bottom: 50px;
-  left: 25px;
+  right: 0;
   z-index: 9000;
 }
 .portfolio-details h2 {
@@ -210,8 +207,11 @@ li {
 }
 .portfolio-details a h2, .portfolio-details a p {
   color: white;
-  text-shadow: 2px 3px black;
 }
+.portfolio-details a:hover {
+  text-decoration: none;
+}
+
 a:hover {
   text-decoration: none;
 }
@@ -260,3 +260,8 @@ hr.socket {
 ::-webkit-scrollbar-thumb:hover {
   background: rgb(153, 152, 152); 
 }
+
+
+
+
+

@@ -1,4 +1,5 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
+import { Restaurant } from 'src/app/models/restaurant';
 
 @Component({
   selector: 'app-edit-restaurant',
@@ -7,6 +8,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class EditRestaurantComponent implements OnInit {
   @Output() editRestaurant: EventEmitter<any> = new EventEmitter();
+  @Input() restaurants:Restaurant[];
   id:number;
   name:string;
   foodStyle:string;
@@ -22,7 +24,7 @@ export class EditRestaurantComponent implements OnInit {
     const restaurant = {
       id:this.id,
       name: this.name,
-      foodStyle: this.foodStyle,
+      foodStyle: this.foodStyle, 
       street: this.street,
       addressNumber: this.addressNumber,
       imagePath:this.imagePath

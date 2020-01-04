@@ -1,3 +1,22 @@
-<div class="grid-item">
+<!-- <div class="grid-item">
     {{ dish.name }} | {{ dish.mainIngredient }} | {{ dish.nationality }} | {{ dish.cost }} | {{ dish.size }} | <img src="{{ dish.imagePath }} ">
+</div> -->
+
+
+<div class="box">
+    <div class="imgBox">
+      <img src="{{ dish.imagePath }}">
+    </div>
+    <div class="details">
+      <div class="content">
+        <div class="help-tip">
+            <p>Id of The Dish: {{dish.id}}</p>
+        </div>
+        <h3>{{ dish.name }}</h3>
+        <p>Main ingredient: {{ dish.mainIngredient }} ({{ dish.nationality }})</p>
+        <p>Cost: {{ dish.cost }} $</p>
+        <p>Sizes: {{ dish.size }}</p>
+    
+      </div>
+    </div>
 </div>

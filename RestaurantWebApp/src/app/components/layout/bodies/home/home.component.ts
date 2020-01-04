@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Restaurant } from 'src/app/models/restaurant';
+import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  constructor() { }
+  restaurants:Restaurant[];
+  
+  constructor(private restaurantService:RestaurantService) { }
 
   ngOnInit() {
     localStorage.removeItem("restaurant");
   }
+
 
 }

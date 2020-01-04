@@ -1,13 +1,39 @@
-
-<div>
-    <!-- <p>NAME | MAIN INGREDIENT | NATIONALITY | COST | SIZE | IMAGE</p> -->
+<div class="bg">
+    <div class="container">
+        <!-- <p>NAME | MAIN INGREDIENT | NATIONALITY | COST | SIZE | IMAGE</p> -->
+        
+        <!-- <div class="grid-container">
+        
+        </div> -->
+        <div class="dishes">
+            <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+        </div>
+        <p>
+            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add Dish</a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Edit Dish</button>
+        </p>
+        <div class="row">
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <app-add-dish (addDish)="addDish($event)"></app-add-dish>
+            </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                <app-edit-dish (editDish)="editDish($event)"></app-edit-dish>
+            </div>
+            </div>
+        </div>
+        </div>
+   
+        
     
-    <div class="grid-container">
-        <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+        <!-- <h1>Add Dish</h1>
+        <app-add-dish (addDish)="addDish($event)"></app-add-dish>
+        <h1>Edit Dish</h1>
+        <app-edit-dish (editDish)="editDish($event)"></app-edit-dish> -->
     </div>
-
-    <!-- <h1>Add Dish</h1>
-    <app-add-dish (addDish)="addDish($event)"></app-add-dish>
-    <h1>Edit Dish</h1>
-    <app-edit-dish (editDish)="editDish($event)"></app-edit-dish> -->
 </div>

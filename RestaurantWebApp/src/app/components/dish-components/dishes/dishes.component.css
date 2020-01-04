@@ -1,6 +1,14 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    background-color: rgb(212, 200, 146);
-    padding: 10px;
-  }
+.cont .dishes {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bg{
+  background-image: url("/assets/images/Slides/madera3.jpeg");
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

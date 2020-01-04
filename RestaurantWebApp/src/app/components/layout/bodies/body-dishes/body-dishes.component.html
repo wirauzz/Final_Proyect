@@ -1,5 +1,5 @@
  <!-- Start Landing -->
- <div class="landing">
+ <!-- <div class="landing">
     <div class="home-wrap">
       <div class="home-inner">
         <div class="caption">
@@ -11,5 +11,16 @@
       </div>
     </div>
   </div>
-  <app-dishes></app-dishes>
+  <app-dishes></app-dishes> -->
   <!-- End Landing -->
+
+  <section id="hero">
+    <div class="container context">
+      <img src="{{ restaurant.imagePath}}" class="img-fluid" id="logo">
+      <div class="content-center topmargin-lg">
+          <h1>{{ restaurant.name }}</h1>
+          <p>Location: {{ restaurant.street }} | Address Number: {{ restaurant.addressNumber }}</p>
+      </div>
+    </div>
+  </section>
+  <app-dishes></app-dishes>

@@ -11,7 +11,7 @@ export class BodyDishesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    setTimeout(()=>{ this.restaurant = JSON.parse(localStorage.getItem("restaurant"))}, 100);  
+    setTimeout(()=>{ this.restaurant = JSON.parse(localStorage.getItem("restaurant"))}, 500);  
   }
 
 }
