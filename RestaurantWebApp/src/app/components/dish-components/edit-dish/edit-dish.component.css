@@ -1,6 +1,7 @@
 .container {
     clear: both;
-    height: 400px;
+    color: white;
+    height: 500px;
   }
   
   .container input {
@@ -8,6 +9,7 @@
     clear: both;
   }
 
+  
   .btn {
     background-color: rgb(124, 14, 14); /* Green */
     border: none;
