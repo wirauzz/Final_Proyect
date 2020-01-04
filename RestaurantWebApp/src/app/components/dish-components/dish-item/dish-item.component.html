@@ -4,11 +4,13 @@
 
 
 <div class="box">
+  
     <div class="imgBox">
       <img src="{{ dish.imagePath }}">
     </div>
     <div class="details">
       <div class="content">
+        <button (click)="onDelete(dish)" class='delete'>X</button>
         <div class="help-tip">
             <p>Id of The Dish: {{dish.id}}</p>
         </div>

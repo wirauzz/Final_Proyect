@@ -41,8 +41,13 @@ export class DishesComponent implements OnInit {
 
   editDish(dish:Dish) {
     this.dishService.putDish(dish,dish.restaurantId).subscribe(dish => {
-      this.dishes[this.dishes.findIndex( d => d.id = dish.id)] = dish;
+      this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
     })
   }
 
+  deleteDish(dish:Dish) {
+    this.dishes = this.dishes.filter(d => d.id != dish.id);
+    console.log(dish.restaurantId);
+    this.dishService.deleteDish(dish, this.restaurant.id).subscribe();
+  }
 }

@@ -6,7 +6,7 @@
         
         </div> -->
         <div class="dishes">
-            <app-dish-item  *ngFor="let dish of dishes" [dish]="dish"></app-dish-item>
+            <app-dish-item  *ngFor="let dish of dishes" [dish]="dish" (deleteDish)="deleteDish($event)"></app-dish-item>
         </div>
         <p>
             <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add Dish</a>

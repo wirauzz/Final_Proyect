@@ -135,3 +135,19 @@
     0% { opacity:0; }
     100% { opacity:100%; }
 }
+
+
+
+.delete {
+    background-color: rgba(0, 0, 0, 0.591); /* Green */
+    border: none;
+    color: white;
+    padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10px;
+    margin-right: 220px;
+    cursor: pointer;
+    position: relative;
+
+}
