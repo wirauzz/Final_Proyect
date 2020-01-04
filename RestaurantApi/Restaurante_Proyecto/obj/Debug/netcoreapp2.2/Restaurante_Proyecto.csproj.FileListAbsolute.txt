@@ -51,3 +51,4 @@ D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurant
 D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.dll
 D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.pdb
 D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.RazorTargetAssemblyInfo.cache
+D:\6to Semestre\Tecnologias Web\Proyectos\Final_Proyect\RestaurantApi\Restaurante_Proyecto\obj\Debug\netcoreapp2.2\Restaurante_Proyecto.csproj.CoreCompileInputs.cache
