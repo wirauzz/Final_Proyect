@@ -1,0 +1,18 @@
+<div class="container">
+    <form class="form" (ngSubmit)="onSubmit()">
+        Name of the restaurant: <input type="text" name="name" [(ngModel)]="name" placeholder="Name of the restaurant">
+        <br>
+        Fodd Style of the restaurant: <input type="text" name="foodStyle" [(ngModel)]="foodStyle" placeholder="Fodd Style of the restaurant">
+        <br>
+        Location of the restaurant:<input type="text" name="street" [(ngModel)]="street" placeholder="Location of the restaurant">
+        <br>
+        Address Number of the restaurant:<input type="text" name="addressNumber" [(ngModel)]="addressNumber" placeholder="Address Number of the restaurant ">
+        <br>
+        Logo of the restaurant: <input type="text" name="imagePath" [(ngModel)]="imagePath" placeholder="Logo of the restaurant">
+        <br>
+        <br>
+        <br> 
+        <br>
+        <input type="submit" value="submit" class="btn">
+    </form>    
+</div>
