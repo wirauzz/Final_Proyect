@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Restaurante_Proyecto.Exceptions;
 using Restaurante_Proyecto.Models;
 using Restaurante_Proyecto.Services;
 
@@ -27,10 +28,11 @@ namespace Restaurante_Proyecto.Controllers
             {
                 return Ok(await dishService.GetDishesAsync(restaurantId));
             }
-            catch
+            catch (Exception ex)
             {
-                throw new Exception("Not possible to show");
+                return this.StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
+            
         }
 
         [HttpGet("{id:int}")]
@@ -40,23 +42,36 @@ namespace Restaurante_Proyecto.Controllers
             {
                 return Ok(await dishService.GetDishAsync(restaurantId,id));
             }
+            catch (NotFoundItemException ex)
+            {
+                return this.StatusCode(StatusCodes.Status404NotFound, ex.Message);
+            }
             catch
             {
-                throw new Exception("Not possible to show");
+                throw new Exception("Dish was not found");
             }
         }
 
         [HttpPost]
-        public async Task<ActionResult<Dish>> Post([FromBody] Dish dish, int restaurantId)
+        public async Task<ActionResult<Dish>> PostDish([FromBody] Dish dish, int restaurantId)
         {
             try
             {
-                return Ok(await dishService.CreateDishAsync(restaurantId, dish));
+                var dishCreated = await dishService.CreateDishAsync(restaurantId, dish);
+                return Created($"api/Restaurant/{restaurantId}/Dish/{dishCreated.Id}",dishCreated);
             }
-            catch
+            catch (WrongOperationException ex)
             {
-                throw new Exception("Not possible to show");
+                return this.StatusCode(StatusCodes.Status412PreconditionFailed, ex.Message);
             }
+            catch (ChangesNotExecutedException ex)
+            {
+                return this.StatusCode(StatusCodes.Status409Conflict, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+            }            
         }
 
         [HttpPut("{id:int}")]
@@ -66,9 +81,21 @@ namespace Restaurante_Proyecto.Controllers
             {
                 return Ok(await dishService.UpdateDishAsync(restaurantId, id, dish));
             }
-            catch
+            catch (WrongOperationException ex)
             {
-                throw new Exception("Not possible to show");
+                return this.StatusCode(StatusCodes.Status412PreconditionFailed, ex.Message);
+            }
+            catch (NotFoundItemException ex)
+            {
+                return this.StatusCode(StatusCodes.Status404NotFound, ex.Message);
+            }
+            catch (ChangesNotExecutedException ex)
+            {
+                return this.StatusCode(StatusCodes.Status409Conflict, ex.Message);
+            }
+            catch (Exception ex)
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
             }
         }
         [HttpDelete("{id:int}")]
@@ -76,11 +103,15 @@ namespace Restaurante_Proyecto.Controllers
         {
             try
             {
-                return Ok(await dishService.DeleteDish(restaurantId, id));
+                if(await dishService.DeleteDish(restaurantId, id))
+                {
+                    return this.StatusCode(StatusCodes.Status410Gone, "Dish deleted");
+                }
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "Dish not deleted");
             }
-            catch
+            catch (Exception ex)
             {
-                throw new Exception("Not possible to show");
+                return this.StatusCode(StatusCodes.Status404NotFound, ex.Message);
             }
         }
     }
