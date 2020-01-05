@@ -26,7 +26,7 @@ import { BodyDishesComponent } from './components/layout/bodies/body-dishes/body
     AppComponent,
     RestaurantItemComponent,
     RestaurantsComponent,
-    DishesComponent,
+    DishesComponent, 
     DishItemComponent,
     AddRestaurantComponent,
     EditRestaurantComponent,
