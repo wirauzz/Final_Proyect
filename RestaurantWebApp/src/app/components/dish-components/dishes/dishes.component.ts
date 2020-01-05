@@ -14,13 +14,23 @@ export class DishesComponent implements OnInit {
   dishes:Dish[];
   restaurant:Restaurant;
 
-  constructor(private dishService:DishService, private sharingService:SharingService) { }
+  constructor(private dishService:DishService, private sharingService:SharingService) {
+   }
 
   ngOnInit() {
     this.restaurant = this.sharingService.getData();
+    if(this.restaurant == undefined)
+    { 
+      this.restaurant = JSON.parse(localStorage.getItem("restaurant"));
+    }
+    else
+    {
+      localStorage.setItem("restaurant", JSON.stringify(this.restaurant));
+    }
     this.dishService.getDishes(this.restaurant.id).subscribe(dishes => {
       this.dishes = dishes;
     });
+    console.log(this.restaurant);
   }
 
   addDish(dish:Dish) { 
@@ -31,8 +41,13 @@ export class DishesComponent implements OnInit {
 
   editDish(dish:Dish) {
     this.dishService.putDish(dish,dish.restaurantId).subscribe(dish => {
-      this.dishes[this.dishes.findIndex( d => d.id = dish.id)] = dish;
+      this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
     })
   }
 
+  deleteDish(dish:Dish) {
+    this.dishes = this.dishes.filter(d => d.id != dish.id);
+    console.log(dish.restaurantId);
+    this.dishService.deleteDish(dish, this.restaurant.id).subscribe();
+  }
 }

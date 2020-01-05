@@ -9,10 +9,16 @@ import { DishService } from 'src/app/services/dish.service';
 })
 export class DishItemComponent implements OnInit {
   @Input() dish:Dish;
+  @Output() deleteDish:EventEmitter<Dish> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
   }
+
+  onDelete(dish:Dish) {
+    this.deleteDish.emit(dish);
+  }
+
 
 }

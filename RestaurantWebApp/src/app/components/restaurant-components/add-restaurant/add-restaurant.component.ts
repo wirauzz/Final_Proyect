@@ -11,7 +11,7 @@ export class AddRestaurantComponent implements OnInit {
   foodStyle:string;
   street:string;
   addressNumber:number;
-  filePath:string;
+  imagePath:string;
   constructor() { }
 
   ngOnInit() {
@@ -23,7 +23,7 @@ export class AddRestaurantComponent implements OnInit {
       foodStyle: this.foodStyle,
       street: this.street,
       addressNumber: this.addressNumber,
-      filePath:this.filePath
+      imagePath:this.imagePath
     }
     this.addRestaurant.emit(restaurant);
   }

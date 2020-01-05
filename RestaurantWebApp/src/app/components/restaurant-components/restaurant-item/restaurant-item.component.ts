@@ -24,6 +24,7 @@ export class RestaurantItemComponent implements OnInit {
   }
 
   onRedirect(restaurant) { 
+    console.log("I got clicked!!");
     this.sharingService.setData(restaurant);
     this.router.navigate(["/dishes"]);//redirects url to new component
   }

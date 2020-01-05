@@ -16,6 +16,10 @@ import { DishesPageComponent } from './components/pages/dishes-page/dishes-page.
 import { RestaurantsPageComponent } from './components/pages/restaurants-page/restaurants-page.component';
 import { AddDishComponent } from './components/dish-components/add-dish/add-dish.component';
 import { EditDishComponent } from './components/dish-components/edit-dish/edit-dish.component';
+import { HomeComponent } from './components/layout/bodies/home/home.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
+import { HomePageComponent } from './components/pages/home-page/home-page.component';
+import { BodyDishesComponent } from './components/layout/bodies/body-dishes/body-dishes.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { EditDishComponent } from './components/dish-components/edit-dish/edit-d
     DishesPageComponent,
     RestaurantsPageComponent,
     AddDishComponent,
-    EditDishComponent
+    EditDishComponent,
+    HomeComponent,
+    FooterComponent,
+    HomePageComponent,
+    BodyDishesComponent
   ],
   imports: [
     BrowserModule,
