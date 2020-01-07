@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DishesPageComponent } from './components/pages/dishes-page/dishes-page.component';
-import { RestaurantsPageComponent } from './components/pages/restaurants-page/restaurants-page.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
+import { EditDishComponent } from './components/dish-components/edit-dish/edit-dish.component';
+import { EditRestaurantComponent } from './components/restaurant-components/edit-restaurant/edit-restaurant.component';
 
 
 const routes: Routes = [
-  { path: 'dishes', component: DishesPageComponent },
-  { path: 'restaurants', component: RestaurantsPageComponent},
-  { path: '', component: HomePageComponent}
+  { path: 'restaurants/:id/dishes', component: DishesPageComponent },
+  { path: 'restaurants/:id/dishes/:idDish/edit', component: EditDishComponent},
+  { path: 'restaurants/:id/edit', component: EditRestaurantComponent},
+  { path: 'restaurants', component: HomePageComponent},
+  { path: '', component: HomePageComponent},
+  
 ];
 
 @NgModule({

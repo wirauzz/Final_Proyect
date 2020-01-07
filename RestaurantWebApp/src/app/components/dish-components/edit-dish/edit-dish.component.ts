@@ -1,4 +1,8 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
+import { DishService } from 'src/app/services/dish.service';
+import { Dish } from 'src/app/models/dish';
+
 @Component({
   selector: 'app-edit-dish',
   templateUrl: './edit-dish.component.html',
@@ -6,6 +10,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class EditDishComponent implements OnInit {
   @Output() editDish: EventEmitter<any> = new EventEmitter();
+  dish:Dish;
   id:number;
   name:string;
   mainIngredient:string;
@@ -14,9 +19,13 @@ export class EditDishComponent implements OnInit {
   size:string;
   restaurantId:number;
   imagePath:String;
-  constructor() { }
+  constructor(private dishService:DishService, private route:ActivatedRoute) { }
 
   ngOnInit() {
+    this.route.params.subscribe( params => this.dishService.getDish(params['id'],params['idDish']).subscribe(dish => {
+      this.dish = dish
+    }));
+    console.log(this.dish);
   }
 
   

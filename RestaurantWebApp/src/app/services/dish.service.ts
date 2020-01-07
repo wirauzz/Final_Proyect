@@ -25,6 +25,10 @@ export class DishService {
     return this.Http.get<Dish[]>(`${this.dishUrl}/${idRestaurant}/Dish`);
   }
 
+  getDish(idRestaurant:number,idDish:Number):Observable<Dish> {
+    return this.Http.get<Dish>(`${this.dishUrl}/${idRestaurant}/Dish/${idDish}`);
+  }
+
   deleteDish(dish:Dish,idRestaurant:number):Observable<any> {
     const url = `${this.dishUrl}/${idRestaurant}/Dish/${dish.id}`;
     return this.Http.delete(url, httpOptions);

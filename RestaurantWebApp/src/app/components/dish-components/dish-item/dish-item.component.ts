@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Dish } from 'src/app/models/dish';
-import { DishService } from 'src/app/services/dish.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dish-item',
@@ -11,13 +11,18 @@ export class DishItemComponent implements OnInit {
   @Input() dish:Dish;
   @Output() deleteDish:EventEmitter<Dish> = new EventEmitter();
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
   onDelete(dish:Dish) {
     this.deleteDish.emit(dish);
+  }
+
+  onRedirect(dish:Dish) {
+    console.log(dish);
+    this.router.navigate([`/restaurants/${dish.restaurantId}/dishes/${dish.id}/edit`]);
   }
 
 

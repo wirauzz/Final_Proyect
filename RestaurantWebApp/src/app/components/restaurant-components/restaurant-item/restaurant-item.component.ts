@@ -1,7 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
 import { Router } from '@angular/router';
-import { SharingService } from '../../../services/sharing.service';
 
 
 @Component({
@@ -14,7 +13,7 @@ export class RestaurantItemComponent implements OnInit {
   @Output() deleteRestaurant:EventEmitter<Restaurant> = new EventEmitter();
   @Output() getDishesFromRestaurant:EventEmitter<Restaurant> = new EventEmitter();
 
-  constructor(private router:Router, private sharingService:SharingService) { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
@@ -24,9 +23,7 @@ export class RestaurantItemComponent implements OnInit {
   }
 
   onRedirect(restaurant) { 
-    console.log("I got clicked!!");
-    this.sharingService.setData(restaurant);
-    this.router.navigate(["/dishes"]);//redirects url to new component
+    this.router.navigate([`/restaurants/${restaurant.id}/dishes`]);
   }
 
 
