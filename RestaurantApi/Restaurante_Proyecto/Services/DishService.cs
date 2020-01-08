@@ -22,11 +22,11 @@ namespace Restaurante_Proyecto.Services
         public async Task<Dish> CreateDishAsync(int idRestaurant, Dish dish)
         {
             //var rest = ValidateRestaurant(idRestaurant);
-            if(dish.RestautantId != null && idRestaurant != dish.RestautantId)
+            if(dish.RestaurantId != null && idRestaurant != dish.RestaurantId)
             {
                 throw new WrongOperationException("Restaurant from URL and the one specified in the id has to be the same");
             }
-            dish.RestautantId = idRestaurant;
+            dish.RestaurantId = idRestaurant;
             var restaurantEntity = await ValidateRestaurant(idRestaurant);
             var dishEntity = mapper.Map<DishEntity>(dish);
             dishEntity.Restaurant = restaurantEntity;
@@ -58,7 +58,7 @@ namespace Restaurante_Proyecto.Services
                 throw new NotFoundItemException("The dish was not found in the DB");
             }
             var dish = mapper.Map<Dish>(dishEntity);
-            dish.RestautantId = idRestaurant;
+            dish.RestaurantId = idRestaurant;
             return dish;
         }
 
@@ -68,7 +68,7 @@ namespace Restaurante_Proyecto.Services
             var dishesList = mapper.Map<IEnumerable<Dish>>(dishesEntities);
             foreach(Dish d in dishesList)
             {
-                d.RestautantId = idRestaurant;
+                d.RestaurantId = idRestaurant;
             }
             return dishesList;
         }

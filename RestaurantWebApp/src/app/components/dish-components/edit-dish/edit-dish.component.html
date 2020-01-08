@@ -1,21 +1,34 @@
-<div class="container">
-    <form class="form" (ngSubmit)="onEdit()">
-        Id of the dish <br><input type="number" name="id" [(ngModel)]="id" placeholder="id of the dish">
-        <br>
-        Name of the dish<input type="text" name="name" [(ngModel)]="name" placeholder="Name of the dish">
-        <br>
-        Main Ingredient of the dish<input type="text" name="mainIngredient" [(ngModel)]="mainIngredient" placeholder="Main Ingredient of the dish">
-        <br>
-        Nationality of the dish<input type="text" name="nationality" [(ngModel)]="nationality" placeholder="Nationality of the dish">
-        <br>
-        Cost of the dish <input type="number" name="cost" [(ngModel)]="cost" placeholder="Cost of the dish ">
-        <br>
-        Size of the dish<input type="text" name="size" [(ngModel)]="size" placeholder="Size of the dish">
-        <br>
-        Url image of the dish<input type="text" name="imagePath" [(ngModel)]="imagePath" placeholder="Url image of the dish">
-        <br>
-        Id restaurant of the dish<input type="number" name="restaurantId" [(ngModel)]="restaurantId" placeholder="Id restaurant of the dish">
-        <br>
-        <input type="submit" value="submit" class="btn"ype="submit" value="submit" class="btn">
-    </form>
-</div>
+<div class="container-fluid" id="cont-dish">
+    <div class="wrap">
+      <div class="Regisration">
+        <div class="Regisration-head">
+          <h2>Edit Dish</h2>
+        </div>
+        <img src="{{ imagePath }}" class="img-fluid" id="logo">
+        <form class="form" [formGroup]="dishForm" (ngSubmit)="onSubmit(dishForm.value)">
+            Id of the dish<input type="number" formControlName="id" placeholder="id of the dish">
+            <br>
+            Name of the dish<input type="text" formControlName="name"  placeholder="Name of the dish"> 
+            <br>
+            Main Ingredient of the dish<input type="text" formControlName="mainIngredient" placeholder="Main Ingredient of the dish">
+            <br>
+            Nationality of the dish<input type="text" formControlName="nationality"  placeholder="Nationality of the dish">
+            <br>
+            Cost of the dish <input type="number" formControlName="cost"  placeholder="Cost of the dish ">
+            <br>
+            Size of the dish<input type="text" formControlName="size"  placeholder="Size of the dish" >
+            <br>
+            Url image of the dish<input type="text" formControlName="imagePath"  placeholder="Url image of the dish">
+            <br>
+            Id restaurant of the dish<input type="number" formControlName="restaurantId"  placeholder="Id restaurant of the dish" >
+            <br>
+            <div class="clear"></div>
+            <button type="submit" class="btn btn-primary col-md-4" [disabled]="dishForm.invalid">Update</button>
+            <a [routerLink]="['/restuarants/restaurantId/dishes']">
+              <button type="submit" class="btn btn-primary col-md-4 ml-1">Back</button>
+            </a>
+         </form>
+         <div class="clear"> </div>
+        </div>
+    </div>
+  </div>

@@ -26,11 +26,11 @@ export class DishesComponent implements OnInit {
     });
   }
 
-  editDish(dish:Dish) {
-    this.dishService.putDish(dish,this.idRestaurant).subscribe(dish => {
-      this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
-    })
-  }
+  // editDish(dish:Dish) {
+  //   this.dishService.putDish(dish,this.idRestaurant).subscribe(dish => {
+  //     this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
+  //   })
+  // }
 
   deleteDish(dish:Dish) {
     this.dishes = this.dishes.filter(d => d.id != dish.id);

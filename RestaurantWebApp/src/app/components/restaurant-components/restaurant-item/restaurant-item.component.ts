@@ -18,8 +18,12 @@ export class RestaurantItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  onDelete(restaurant) {
+  onDelete(restaurant:Restaurant) {
     this.deleteRestaurant.emit(restaurant);
+  }
+
+  onEdit(restaurant:Restaurant) {
+    this.router.navigate([`/restaurants/edit/${restaurant.id}`]);
   }
 
   onRedirect(restaurant) { 

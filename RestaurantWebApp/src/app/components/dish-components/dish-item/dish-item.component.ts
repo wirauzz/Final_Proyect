@@ -22,7 +22,7 @@ export class DishItemComponent implements OnInit {
 
   onRedirect(dish:Dish) {
     console.log(dish);
-    this.router.navigate([`/restaurants/${dish.restaurantId}/dishes/${dish.id}/edit`]);
+    this.router.navigate([`/restaurants/${dish.restaurantId}/dishes/edit/${dish.id}`]);
   }
 
 

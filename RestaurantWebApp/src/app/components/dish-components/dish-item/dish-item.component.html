@@ -1,6 +1,3 @@
-<!-- <div class="grid-item">
-    {{ dish.name }} | {{ dish.mainIngredient }} | {{ dish.nationality }} | {{ dish.cost }} | {{ dish.size }} | <img src="{{ dish.imagePath }} ">
-</div> -->
 
 
 <div class="box">
@@ -12,9 +9,6 @@
       <div class="content">
         <button (click)="onDelete(dish)" class='delete'>X</button>
         <button (click)="onRedirect(dish)" class='delete'>Edit</button>
-        <div class="help-tip">
-            <p>Id of The Dish: {{dish.id}}</p>
-        </div>
         <h3>{{ dish.name }}</h3>
         <p>Main ingredient: {{ dish.mainIngredient }} ({{ dish.nationality }})</p>
         <p>Cost: {{ dish.cost }} $</p>

@@ -15,7 +15,7 @@ export class BodyDishesComponent implements OnInit {
   ngOnInit() {   
     this.route.params.subscribe( params => this.restaurantService.getRestaurant(params['id']).subscribe(restaurant => {
       this.restaurant = restaurant
-      })); 
+    })); 
   }
 
 }

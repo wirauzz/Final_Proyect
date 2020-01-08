@@ -1,5 +1,7 @@
-import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
-import { Restaurant } from 'src/app/models/restaurant';
+import { Component, OnInit } from '@angular/core';
+import { RestaurantService } from 'src/app/services/restaurant.service';
+import {FormBuilder, FormGroup, Validators, NgForm} from "@angular/forms";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-edit-restaurant',
@@ -7,29 +9,46 @@ import { Restaurant } from 'src/app/models/restaurant';
   styleUrls: ['./edit-restaurant.component.css']
 })
 export class EditRestaurantComponent implements OnInit {
-  @Output() editRestaurant: EventEmitter<any> = new EventEmitter();
-  @Input() restaurants:Restaurant[];
+  restaurantForm:FormGroup;
   id:number;
-  name:string;
-  foodStyle:string;
-  street:string;
-  addressNumber:number;
-  imagePath:string;
-  constructor() { }
+  imagePath:String;
+  constructor(private formBuilder: FormBuilder, private activeAouter: ActivatedRoute, private router: Router, private restaurantService:RestaurantService) { }
 
   ngOnInit() {
+    this.getDetail(this.activeAouter.snapshot.params['id']);
+ 
+    this.restaurantForm = this.formBuilder.group({
+      id:['', Validators.compose([Validators.required])],
+      name: ['', Validators.compose([Validators.required])],
+      foodStyle: ['', Validators.compose([Validators.required])],
+      street: ['', Validators.compose([Validators.required])],
+      addressNumber: ['', Validators.compose([Validators.required])],
+      imagePath: ['', Validators.compose([Validators.required])]
+    });
+  }
+  getDetail(id) {
+    this.restaurantService.getRestaurant(id)
+      .subscribe(restaurant => {
+        this.id = restaurant.id;
+        this.restaurantForm.setValue({
+          id: restaurant.id,
+          name: restaurant.name,
+          foodStyle: restaurant.foodStyle,
+          street: restaurant.street,
+          addressNumber: restaurant.addressNumber,
+          imagePath: restaurant.imagePath
+        });
+        console.log(restaurant);
+        this.imagePath = restaurant.imagePath;
+      });
   }
 
-  onEdit() {
-    const restaurant = {
-      id:this.id,
-      name: this.name,
-      foodStyle: this.foodStyle, 
-      street: this.street,
-      addressNumber: this.addressNumber,
-      imagePath:this.imagePath
-    }
-    this.editRestaurant.emit(restaurant);
+  onSubmit(form:NgForm) {
+    this.restaurantService.putRestaurant(form)
+      .subscribe(res => {
+          this.router.navigate(['/']);
+        }
+      );
   }
 
 

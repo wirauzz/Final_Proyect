@@ -39,7 +39,7 @@ export class DishService {
     return this.Http.post<Dish>(url,dish,httpOptions); 
   }
 
-  putDish(dish:Dish,idRestaurant:number):Observable<Dish> {
+  putDish(dish,idRestaurant:number):Observable<Dish> {
     const url = `${this.dishUrl}/${idRestaurant}/Dish/${dish.id}`;
     return this.Http.put<Dish>(url,dish,httpOptions); 
   }

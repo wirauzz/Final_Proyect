@@ -42,7 +42,7 @@ export class RestaurantService {
     return this.Http.post<Restaurant>(this.restaurantUrl,restaurant,httpOptions); 
   }
 
-  putRestaurant(restaurant:Restaurant):Observable<Restaurant> {
+  putRestaurant(restaurant):Observable<Restaurant> {
     const url = `${this.restaurantUrl}/${restaurant.id}`;
     return this.Http.put<Restaurant>(url,restaurant,httpOptions); 
   }
