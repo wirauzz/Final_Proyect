@@ -1,6 +1,6 @@
 
 /* --------NAVBAR - Navigation--------- */
-/* .navbar {
+.navbar {
   text-transform: uppercase;
   font-weight: 700;
   font-size: .9rem;
@@ -20,4 +20,34 @@
 .navbar-dark .navbar-nav .nav-link.active,
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #1ebba3;
-} */
+}
+
+/* --------Landing Page--------- */
+.home-inner {
+  background-image: url("/assets/images/Slides/banner-food.jpg");
+  height: 650px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+}
+.caption h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  letter-spacing: .3rem;
+  text-shadow: .1rem .1rem .8rem black;
+}
+.caption h3 {
+  font-size: 2rem;
+  text-shadow: .1rem .1rem .5rem black;
+  padding-bottom: 1.6rem;
+}

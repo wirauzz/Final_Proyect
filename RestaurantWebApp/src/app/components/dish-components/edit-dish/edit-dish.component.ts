@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { DishService } from 'src/app/services/dish.service';
-import {Location} from '@angular/common';
 import {FormBuilder, FormGroup, Validators, NgForm} from "@angular/forms";;
 
 @Component({
@@ -58,5 +57,10 @@ export class EditDishComponent implements OnInit {
           this.router.navigate([`/restaurants/${this.restaurantId}/dishes`]);
         }
       );
+  }
+
+  onClick() {
+    console.log("asd");
+    this.router.navigate([`/restaurants/${this.restaurantId}/dishes`]);
   }
 }

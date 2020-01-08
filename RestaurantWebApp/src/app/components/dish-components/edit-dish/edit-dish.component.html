@@ -24,7 +24,7 @@
             <br>
             <div class="clear"></div>
             <button type="submit" class="btn btn-primary col-md-4" [disabled]="dishForm.invalid">Update</button>
-            <a [routerLink]="['/restuarants/restaurantId/dishes']">
+            <a [routerLink]="['/restaurants', restaurantId, 'dishes']">
               <button type="submit" class="btn btn-primary col-md-4 ml-1">Back</button>
             </a>
          </form>
