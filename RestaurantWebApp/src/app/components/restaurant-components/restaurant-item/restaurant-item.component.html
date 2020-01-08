@@ -8,10 +8,8 @@
     <div class="portfolio-container">
       <div class="portfolio-details">
         <button (click)="onDelete(restaurant)" class='delete'>X</button>
+        <button (click)="onEdit(restaurant)" class='delete'>Edit</button>
       </div>
         <img src="{{ restaurant.imagePath }}" class="img-fluid" (click)="onRedirect(restaurant)">
      </div>    
-     <div class="help-tip">
-      <p>Id of The restaurant: {{restaurant.id}}</p>
-    </div>
  </div>

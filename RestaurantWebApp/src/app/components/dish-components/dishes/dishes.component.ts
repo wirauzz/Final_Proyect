@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DishService } from 'src/app/services/dish.service';
 import { Dish } from 'src/app/models/dish';
-import { SharingService } from '../../../services/sharing.service'
-import { Restaurant } from 'src/app/models/restaurant';
-
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-dishes',
@@ -12,42 +10,30 @@ import { Restaurant } from 'src/app/models/restaurant';
 })
 export class DishesComponent implements OnInit {
   dishes:Dish[];
-  restaurant:Restaurant;
+  idRestaurant:number;
 
-  constructor(private dishService:DishService, private sharingService:SharingService) {
-   }
+  constructor(private dishService:DishService, private route:ActivatedRoute) {}
 
   ngOnInit() {
-    this.restaurant = this.sharingService.getData();
-    if(this.restaurant == undefined)
-    { 
-      this.restaurant = JSON.parse(localStorage.getItem("restaurant"));
-    }
-    else
-    {
-      localStorage.setItem("restaurant", JSON.stringify(this.restaurant));
-    }
-    this.dishService.getDishes(this.restaurant.id).subscribe(dishes => {
-      this.dishes = dishes;
-    });
-    console.log(this.restaurant);
+    this.route.params.subscribe( params => this.dishService.getDishes(params['id']).subscribe(dishes => {
+      this.dishes = dishes
+    }));
   }
 
   addDish(dish:Dish) { 
-    this.dishService.addDish(dish, dish.restaurantId).subscribe(dish => {
+    this.dishService.addDish(dish, this.idRestaurant).subscribe(dish => {
       this.dishes.push(dish);
     });
   }
 
-  editDish(dish:Dish) {
-    this.dishService.putDish(dish,dish.restaurantId).subscribe(dish => {
-      this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
-    })
-  }
+  // editDish(dish:Dish) {
+  //   this.dishService.putDish(dish,this.idRestaurant).subscribe(dish => {
+  //     this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
+  //   })
+  // }
 
   deleteDish(dish:Dish) {
     this.dishes = this.dishes.filter(d => d.id != dish.id);
-    console.log(dish.restaurantId);
-    this.dishService.deleteDish(dish, this.restaurant.id).subscribe();
+    this.dishService.deleteDish(dish, this.idRestaurant).subscribe();
   }
 }

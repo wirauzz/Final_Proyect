@@ -24,6 +24,10 @@ export class RestaurantService {
     return this.Http.get<Restaurant[]>(`${this.restaurantUrl}`);
   }
 
+  getRestaurant(idRestaurant:number):Observable<Restaurant> {
+    return this.Http.get<Restaurant>(`${this.restaurantUrl}/${idRestaurant}`);
+  }
+
   deleteRestaurant(restaurant:Restaurant):Observable<any> {
     const url = `${this.restaurantUrl}/${restaurant.id}`;
     return this.Http.delete(url, httpOptions);
@@ -38,7 +42,7 @@ export class RestaurantService {
     return this.Http.post<Restaurant>(this.restaurantUrl,restaurant,httpOptions); 
   }
 
-  putRestaurant(restaurant:Restaurant):Observable<Restaurant> {
+  putRestaurant(restaurant):Observable<Restaurant> {
     const url = `${this.restaurantUrl}/${restaurant.id}`;
     return this.Http.put<Restaurant>(url,restaurant,httpOptions); 
   }

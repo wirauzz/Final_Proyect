@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Restaurant } from 'src/app/models/restaurant';
+import { ActivatedRoute } from "@angular/router";
+import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
   selector: 'app-body-dishes',
@@ -8,10 +10,12 @@ import { Restaurant } from 'src/app/models/restaurant';
 })
 export class BodyDishesComponent implements OnInit {
   restaurant:Restaurant;
-  constructor() { }
+  constructor(private route: ActivatedRoute, private restaurantService:RestaurantService) { }
 
-  ngOnInit() {
-    setTimeout(()=>{ this.restaurant = JSON.parse(localStorage.getItem("restaurant"))}, 500);  
+  ngOnInit() {   
+    this.route.params.subscribe( params => this.restaurantService.getRestaurant(params['id']).subscribe(restaurant => {
+      this.restaurant = restaurant
+    })); 
   }
 
 }
