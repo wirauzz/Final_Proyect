@@ -21,19 +21,14 @@ export class DishesComponent implements OnInit {
   }
 
   addDish(dish:Dish) { 
-    this.dishService.addDish(dish, this.idRestaurant).subscribe(dish => {
+    console.log(dish);
+    this.dishService.addDish(dish, this.route.snapshot.params['id']).subscribe(dish => {
       this.dishes.push(dish);
     });
   }
 
-  // editDish(dish:Dish) {
-  //   this.dishService.putDish(dish,this.idRestaurant).subscribe(dish => {
-  //     this.dishes[this.dishes.findIndex(d => d.id == dish.id)] = dish;
-  //   })
-  // }
-
   deleteDish(dish:Dish) {
     this.dishes = this.dishes.filter(d => d.id != dish.id);
-    this.dishService.deleteDish(dish, this.idRestaurant).subscribe();
+    this.dishService.deleteDish(dish, this.route.snapshot.params['id']).subscribe();
   }
 }

@@ -1,0 +1,33 @@
+<section class="sectionCard">
+    <div class="bodyCard">
+        <div class="containers">
+            <h1 class="heading"> Meet The Most Cheap/Expensive</h1>
+            <div class="card-wrapper">
+
+                <div class="card" *ngFor="let restaurant of restaurants">
+                    <img src="{{ restaurant.dishes[0].imagePath }}" alt=" Disch card background" class="card-img">
+                    <img src="{{ restaurant.imagePath }}" alt=" Restaurant Logo" class="profile-img">
+                    <h1>{{ restaurant.dishes[0].name}}</h1>
+                    <p class="restaurant-title">{{restaurant.name}}</p>
+                    <p class="about">
+                        Nacionalidad del plato: {{ restaurant.dishes[0].nationality}}
+                        <br>
+                        Ingrediente principal: {{ restaurant.dishes[0].mainIngredient}}
+                        <br>
+                        Costo del plato: {{ restaurant.dishes[0].cost   }}
+                        
+                    </p>
+                    <a [routerLink]="['/restaurants/', restaurant.id,'dishes']" routerLinkActive="router-link-active"  class="btn"> Contact</a>
+                    <ul class="social-media">
+                        <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square"></i></a></li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
