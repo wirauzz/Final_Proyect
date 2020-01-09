@@ -5,17 +5,17 @@
             <div class="card-wrapper">
 
                 <div class="card" *ngFor="let restaurant of restaurants">
-                    <img src="{{ restaurant.imagePath }}" alt=" Disch card background" class="card-img">
+                    <img src="{{ restaurant.dishes[0].imagePath }}" alt=" Disch card background" class="card-img">
                     <img src="{{ restaurant.imagePath }}" alt=" Restaurant Logo" class="profile-img">
                     <h1>Alitas de Pollo</h1>
                     <p class="restaurant-title">{{restaurant.name}}</p>
                     <p class="about">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                        Nisi dolore officiis quis. Obcaecati ullam harum neque ut 
-                        dolor recusandae assumenda, sint animi quas ea quae. 
-                        Similique, earum. Ipsum, quaerat iste.
+                        {{ restaurant.dishes[0].name}}
+                        {{ restaurant.dishes[0].nationallity}}
+                        {{ restaurant.dishes[0].mainIngredient}}
+                        
                     </p>
-                    <a href="#" class="btn"> Contact</a>
+                    <a [routerLink]="['/restaurants/', restaurant.id,'dishes']" routerLinkActive="router-link-active"  class="btn"> Contact</a>
                     <ul class="social-media">
                         <li><a href="#"><i class="fa fa-facebook-square"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter-square"></i></a></li>
