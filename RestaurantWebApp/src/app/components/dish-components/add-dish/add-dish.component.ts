@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
+import { DishService } from "src/app/services/dish.service";
 
 @Component({
   selector: 'app-add-dish',
@@ -14,7 +15,7 @@ export class AddDishComponent implements OnInit {
   cost:number;
   size:string;
   imagePath:String;
-  constructor( private activatedRoute: ActivatedRoute) { }
+  constructor( private activatedRoute: ActivatedRoute, private router:Router, private dishService:DishService) { }
 
   ngOnInit() {
   }
@@ -30,7 +31,11 @@ export class AddDishComponent implements OnInit {
       restaurantId:this.activatedRoute.snapshot.params['id'],
       imagePath:this.imagePath
     }
-    this.addDish.emit(dish);
+    this.dishService.addDish(dish, this.activatedRoute.snapshot.params['id']).subscribe(res => { 
+      this.router.navigate([`/restaurants/${this.activatedRoute.snapshot.params['id']}/dishes`])
+    });
+
+    
   }
 
 }

@@ -8,19 +8,9 @@
         <div class="dishes">
             <app-dish-item  *ngFor="let dish of dishes" [dish]="dish" (deleteDish)="deleteDish($event)"></app-dish-item>
         </div>
-        <p>
-            <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Add Dish</a>
-        </p>
-        <div class="row">
-            <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                <div class="card card-body">
-                    <app-add-dish (addDish)="addDish($event)"></app-add-dish>
-                </div>
-                </div>
-            </div>
-        </div>
-   
+         <a class="btn btn-primary" (click)="onClick()" routerLinkActive="router-link-active">
+                <button>Add Dish</button>
+        </a>
         
     
         <!-- <h1>Add Dish</h1>

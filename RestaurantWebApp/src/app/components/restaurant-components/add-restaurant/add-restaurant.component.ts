@@ -1,4 +1,6 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { RestaurantService } from 'src/app/services/restaurant.service';
 
 @Component({
   selector: 'app-add-restaurant',
@@ -12,7 +14,7 @@ export class AddRestaurantComponent implements OnInit {
   street:string;
   addressNumber:number;
   imagePath:string;
-  constructor() { }
+  constructor(private activeAouter: ActivatedRoute, private router: Router, private restaurantService:RestaurantService) { }
 
   ngOnInit() {
   }
@@ -25,7 +27,9 @@ export class AddRestaurantComponent implements OnInit {
       addressNumber: this.addressNumber,
       imagePath:this.imagePath
     }
-    this.addRestaurant.emit(restaurant);
+    this.restaurantService.addRestaurant(restaurant).subscribe( res => {
+      this.router.navigate(['/']);
+        });
   }
 
 }
