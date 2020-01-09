@@ -1,0 +1,173 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\RestTest\\FoodMapTest.csproj": {}
+  },
+  "projects": {
+    "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+        "projectName": "Restaurante_Proyecto",
+        "projectPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+        "packagesPath": "C:\\Users\\Geraldine Galindo\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Geraldine Galindo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.3.0, )"
+            },
+            "Microsoft.AspNetCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.AspNetCore.Razor.Design": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer.Design": {
+              "target": "Package",
+              "version": "[1.1.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.6, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\RestTest\\FoodMapTest.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\RestTest\\FoodMapTest.csproj",
+        "projectName": "FoodMapTest",
+        "projectPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\RestTest\\FoodMapTest.csproj",
+        "packagesPath": "C:\\Users\\Geraldine Galindo\\.nuget\\packages\\",
+        "outputPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\RestTest\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Geraldine Galindo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {
+                "projectPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.13.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[2.4.0, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

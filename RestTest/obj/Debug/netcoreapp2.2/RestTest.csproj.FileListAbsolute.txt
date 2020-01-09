@@ -1,0 +1,16 @@
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\xunit.runner.reporters.netcoreapp10.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\xunit.runner.utility.netcoreapp10.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\RestTest.deps.json
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\RestTest.runtimeconfig.json
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\RestTest.runtimeconfig.dev.json
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\RestTest.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\Restaurante_Proyecto.pdb
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.csprojAssemblyReference.cache
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.AssemblyInfoInputs.cache
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.AssemblyInfo.cs
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.csproj.CopyComplete
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\bin\Debug\netcoreapp2.2\RestTest.pdb
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.dll
+D:\Universidad\Sexto_Semestre\Tecnologias_Web\C\RestaurantProyectoFinal\Restaurante_Proyecto\RestTest\obj\Debug\netcoreapp2.2\RestTest.pdb

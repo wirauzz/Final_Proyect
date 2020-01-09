@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "ca7de4f9-eb5c-4e04-a594-7821ec9c6545",
+		"name": "FoodAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GETRestaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETRestaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTRestaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"Name\":\"sss\",\r\n\t\"FoodStyle\":\"sssssss\",\r\n\t\"Street\":\"ssssSt\",\r\n\t\"AddressNumber\":\"485\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETERestaurant",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUTRestaurant",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"Id\":1,\n\t\"Name\":\"Paprika\",\n\t\"FoodStyle\":\"European\",\n\t\"Street\":\"Ballivian St\",\n\t\"AddressNumber\":\"3847\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETDish",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1/Dish/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1",
+						"Dish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUTDish",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Spaguetti\",\r\n    \"mainIngredient\": \"Tomates\",\r\n    \"nationality\": \"Italia\",\r\n    \"cost\": 50.35,\r\n    \"size\": \"Grande\",\r\n    \"restautantId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1/Dish/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1",
+						"Dish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETEDish",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1/Dish/1",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1",
+						"Dish",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETDishes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1/Dish",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1",
+						"Dish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POSTDish",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Something\",\n\t\"mainIngredient\":\"Any\",\n\t\"nationality\":\"Somewhere\",\n\t\"cost\":70.23,\n\t\"size\":\"idk\",\n\t\"restaurantId\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{foodAPI}}/api/Restaurant/1/Dish",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"Restaurant",
+						"1",
+						"Dish"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GETAllDishes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{foodAPI}}/api/DishesAll",
+					"host": [
+						"{{foodAPI}}"
+					],
+					"path": [
+						"api",
+						"DishesAll"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
