@@ -37,7 +37,6 @@ export class DishShowcaseComponent implements OnInit {
         });
   
       });
-      console.log(this.restaurants);
     });
 
   }
