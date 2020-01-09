@@ -4,15 +4,15 @@ import { DishService } from 'src/app/services/dish.service';
 import { Restaurant } from 'src/app/models/restaurant';
 import { Dish } from 'src/app/models/dish';
 
+
 @Component({
-  selector: 'app-dish-showcase',
-  templateUrl: './dish-showcase.component.html',
-  styleUrls: ['./dish-showcase.component.css']
+  selector: 'app-expensive-dishes',
+  templateUrl: './expensive-dishes.component.html',
+  styleUrls: ['./expensive-dishes.component.css']
 })
-export class DishShowcaseComponent implements OnInit {
+export class ExpensiveDishesComponent implements OnInit {
   restaurants:Restaurant[];
   dishes:Dish[];
-
   constructor(private restaurantService:RestaurantService, private dishService:DishService) { }
 
   ngOnInit() {
@@ -32,12 +32,12 @@ export class DishShowcaseComponent implements OnInit {
             })
             
           restaurant.dishes.push(
-            this.dishes[this.dishes.length-1]
+            this.dishes[0]
           );
         });
   
       });
     });
-
   }
+
 }

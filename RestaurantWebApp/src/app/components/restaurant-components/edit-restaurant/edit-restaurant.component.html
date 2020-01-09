@@ -1,37 +1,8 @@
-<!-- <div class="container-fluid" id="cont-dish">
-    <div class="wrap">
-      <div class="Regisration">
-        <div class="Regisration-head">
-          <h2>Edit Dish</h2>
-        </div>
-        <img src="{{ restaurant.imagePath }}" class="img-fluid" id="logo">
-        <form class="form" (ngSubmit)="onSubmit()">
-            id of the restaurant: <input type="number" name="id" [(ngModel)]="id" placeholder="id of the restaurant">
-            <br>
-            Name of the restaurant<input type="text" name="name" [(ngModel)]="name" placeholder="Name of the restaurant">
-            <br>
-            Food Style of the restaurant<input type="text" name="foodStyle" [(ngModel)]="foodStyle" placeholder="Food Style of the restaurant">
-            <br>
-            Location of the restaurant<input type="text" name="street" [(ngModel)]="street" placeholder="Location of the restaurant">
-            <br>
-            Address Number of the restaurant <input type="number" name="addressNumber" [(ngModel)]="addressNumber" placeholder="Address Number of the restaurant ">
-            <br>
-            Logo of the restaurant<input type="text" name="imagePath" [(ngModel)]="imagePath" placeholder="Logo of the restaurant">
-            <br>
-            <div class="clear"></div>
-            <div class="submit">
-            <input type="submit" value="Edit the Dish">
-            </div>
-         </form>
-        </div>
-    </div>
-  </div> -->
-
   <div class="container-fluid" id="cont-dish">
     <div class="wrap">
       <div class="Regisration">
         <div class="Regisration-head">
-          <h2>Edit Dish</h2>
+          <h2>Edit Restaurant</h2>
         </div>
         <img src="{{ imagePath }}" class="img-fluid" id="logo">
         <form class="form" [formGroup]="restaurantForm" (ngSubmit)="onSubmit(restaurantForm.value)">

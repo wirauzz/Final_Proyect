@@ -1,114 +1,116 @@
-  /*-------------------------------------------------------*/
-  #cont-dish{
-    color: white;
-    text-decoration: none;
-    background-color: rgb(124, 14, 14); /* Green */
-    text-align: center;
-    padding-top: 20px;
-  }
-  .Regisration {
-    width: 34%;
-    text-align: center;
-    margin: 40px auto 0px;
-    background: #20252D;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -o-border-radius: 7px;
-    padding-bottom: 3px;
-  }
-  .Regisration-head {
-    border-top-left-radius: 7px;
-    -webkit-border-top-left-radius: 7px;
-    -moz-border-top-left-radius: 7px;
-    -o-border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    -webkit-border-top-right-radius: 7px;
-    -moz-border-top-right-radius: 7px;
-    -o-border-top-right-radius: 7px;
-    text-align: center;
-    padding: 1.6em 0;
-    border: 1px solid rgba(0, 0, 0, 0.37);
-    box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
-    -webkit-box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
-    -moz-box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
-    position: relative;
-  }
-  .Regisration-head h2 {
-    color: #0C0D10;
-    font-size: 33px;
-    font-weight: 700;
-    margin-left: 20px;
-    font-family: 'Raleway', sans-serif;
-  }
-  div {
-    display: block;
-  }
-  .Regisration form {
-    text-align: center;
-    margin: 5% 0%;
-    position: relative;
-  }
-  form {
-    display: block;
-    margin-top: 0em;
-    
-  }
-  .Regisration form input[type="text"], .Regisration form input[type="file"], .Regisration form input[type="number"] {
-    font-size: 15px;
-    outline: none;
-    font-weight: 600;
-    color: #8D8E8F;
-    padding: 12px 12px;
-    width: 76%;
-    border-top: 1px solid #090B0D;
-    border-right: 2px solid #424549;
-    border-bottom: 2px solid #424549;
-    border-left: 1px solid #090B0D;
-    margin: 10px 1em;
-    border-radius: 7px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    -o-border-radius: 7px;
-    background: #13161B;
-    box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-    -webkit-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-    -o-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-    -moz-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
-    font-family: 'Raleway', sans-serif;
-  }
-  .submit {
-    text-align: center;
-    margin: 2px 0;
-  }
-  .submit input[type="submit"] {
-    color: #203500;
-    cursor: pointer;
-    border: none;
-    font-weight: 900;
-    outline: none;
-    font-family: 'Raleway', sans-serif;
-    padding: 14px 0px;
-    width: 35%;
-    font-size: 18px;
-    transition: border-color 0.3s;
-    -o-transition: border-color 0.3s;
-    -ms-transition: border-color 0.3s;
-    -moz-transition: border-color 0.3s;
-    -webkit-transition: border-color 0.3s;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -o-border-radius: 4px;
-    -moz-border-radius: 4px;
-    background: rgb(113,209,26);
-    background: -moz-linear-gradient(top, rgba(113,209,26,1) 0%, rgba(96,193,8,1) 3%, rgba(101,199,7,1) 8%, rgba(87,177,0,1) 62%, rgba(75,136,0,1) 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(113,209,26,1)), color-stop(3%,rgba(96,193,8,1)), color-stop(8%,rgba(101,199,7,1)), color-stop(62%,rgba(87,177,0,1)), color-stop(100%,rgba(75,136,0,1)));
-    background: -webkit-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
-    background: -o-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
-    background: -ms-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
-    background: linear-gradient(to bottom, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71d11a', endColorstr='#4b8800',GradientType=0 );
-  }
-  .clear {
-    clear: both;
-  }
+#cont-dish{
+  background-image: url("/assets/images/Slides/madera3.jpeg");
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.Regisration {
+  width: 34%;
+  text-align: center;
+  margin: 0 auto;
+  background: #20252D;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  padding-bottom: 3px;
+  min-width: 300px;
+}
+.Regisration-head {
+  border-top-left-radius: 7px;
+  -webkit-border-top-left-radius: 7px;
+  -moz-border-top-left-radius: 7px;
+  -o-border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -moz-border-top-right-radius: 7px;
+  -o-border-top-right-radius: 7px;
+  text-align: center;
+  padding: 1.6em 0;
+  border: 1px solid rgba(0, 0, 0, 0.37);
+  box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
+  -webkit-box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
+  -moz-box-shadow: 0px 4px 10px 0px rgba(1, 3, 12, 0.33);
+  position: relative;
+}
+.Regisration-head h2 {
+  color: #0C0D10;
+  font-size: 33px;
+  font-weight: 700;
+  margin-left: 20px;
+  font-family: 'Raleway', sans-serif;
+}
+div {
+  display: block;
+}
+.Regisration form {
+  text-align: center;
+  margin: 5% 0%;
+  position: relative;
+}
+form {
+  display: block;
+  margin-top: 0em;
+}
+.Regisration form input[type="text"], .Regisration form input[type="number"] {
+  font-size: 15px;
+  outline: none;
+  font-weight: 600;
+  color: #8D8E8F;
+  padding: 12px 12px;
+  width: 76%;
+  border-top: 1px solid #090B0D;
+  border-right: 2px solid #424549;
+  border-bottom: 2px solid #424549;
+  border-left: 1px solid #090B0D;
+  margin: 10px 1em;
+  border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  -o-border-radius: 7px;
+  background: #13161B;
+  box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+  -webkit-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+  -o-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+  -moz-box-shadow: inset 0px 3px 0px 0px rgba(5, 5, 5, 0.15);
+  font-family: 'Raleway', sans-serif;
+  min-width: 250px;
+}
+.submit {
+  text-align: center;
+  margin: 2px 0;
+}
+.submit input[type="submit"] {
+  color: #203500;
+  cursor: pointer;
+  border: none;
+  font-weight: 900;
+  outline: none;
+  font-family: 'Raleway', sans-serif;
+  padding: 14px 0px;
+  width: 35%;
+  font-size: 18px;
+  transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -webkit-transition: border-color 0.3s;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -moz-border-radius: 4px;
+  background: rgb(113,209,26);
+  background: -moz-linear-gradient(top, rgba(113,209,26,1) 0%, rgba(96,193,8,1) 3%, rgba(101,199,7,1) 8%, rgba(87,177,0,1) 62%, rgba(75,136,0,1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(113,209,26,1)), color-stop(3%,rgba(96,193,8,1)), color-stop(8%,rgba(101,199,7,1)), color-stop(62%,rgba(87,177,0,1)), color-stop(100%,rgba(75,136,0,1)));
+  background: -webkit-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
+  background: -o-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
+  background: -ms-linear-gradient(top, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(113,209,26,1) 0%,rgba(96,193,8,1) 3%,rgba(101,199,7,1) 8%,rgba(87,177,0,1) 62%,rgba(75,136,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#71d11a', endColorstr='#4b8800',GradientType=0 );
+  min-width: 200px;
+}
+.clear {
+  clear: both;
+}

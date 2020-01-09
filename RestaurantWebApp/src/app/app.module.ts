@@ -20,7 +20,8 @@ import { HomeComponent } from './components/layout/bodies/home/home.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { BodyDishesComponent } from './components/layout/bodies/body-dishes/body-dishes.component';
-import { DishShowcaseComponent } from './components/layout/bodies/dish-showcase/dish-showcase.component';
+import { ExpensiveDishesComponent } from './components/layout/bodies/expensive-dishes/expensive-dishes.component';
+import { CheapDishesComponent } from './components/layout/bodies/cheap-dishes/cheap-dishes.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { DishShowcaseComponent } from './components/layout/bodies/dish-showcase/
     FooterComponent,
     HomePageComponent,
     BodyDishesComponent,
-    DishShowcaseComponent
+    ExpensiveDishesComponent,
+    CheapDishesComponent
   ],
   imports: [
     BrowserModule,

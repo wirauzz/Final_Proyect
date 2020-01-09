@@ -6,7 +6,7 @@
         </div>
         <img src="{{ imagePath }}" class="img-fluid" id="logo">
         <form class="form" [formGroup]="dishForm" (ngSubmit)="onSubmit(dishForm.value)">
-            Id of the dish<input type="number" formControlName="id" placeholder="id of the dish">
+            Id of the dish <br> <input type="number" formControlName="id" placeholder="id of the dish">
             <br>
             Name of the dish<input type="text" formControlName="name"  placeholder="Name of the dish"> 
             <br>
