@@ -34,7 +34,7 @@ export class DishService {
     return this.Http.delete(url, httpOptions);
   }
   
-  addDish(dish:Dish,idRestaurant:number):Observable<Dish> {
+  addDish(dish,idRestaurant:number):Observable<Dish> {
     const url = `${this.dishUrl}/${idRestaurant}/Dish`;
     return this.Http.post<Dish>(url,dish,httpOptions); 
   }

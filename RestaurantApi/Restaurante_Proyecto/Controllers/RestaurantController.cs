@@ -24,7 +24,12 @@ namespace Restaurante_Proyecto.Controllers
         {
             try
             {
-                return Ok(await restaurantService.GetRestaurantsAsync());
+                var restaurantsList = await restaurantService.GetRestaurantsAsync();
+                if(!restaurantsList.Any())
+                {
+                    return BadRequest("There was an error with the DB");
+                }
+                return Ok(restaurantsList);
             }
             catch
             {

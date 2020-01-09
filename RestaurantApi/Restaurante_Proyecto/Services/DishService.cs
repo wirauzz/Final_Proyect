@@ -20,8 +20,7 @@ namespace Restaurante_Proyecto.Services
             this.mapper = mapper;
         }
         public async Task<Dish> CreateDishAsync(int idRestaurant, Dish dish)
-        {
-            //var rest = ValidateRestaurant(idRestaurant);
+        { 
             if(dish.RestaurantId != null && idRestaurant != dish.RestaurantId)
             {
                 throw new WrongOperationException("Restaurant from URL and the one specified in the id has to be the same");
@@ -64,6 +63,7 @@ namespace Restaurante_Proyecto.Services
 
         public async Task<IEnumerable<Dish>> GetDishesAsync(int idRestaurant)
         {
+            var restaurant = await ValidateRestaurant(idRestaurant);
             var dishesEntities = await foodRepository.GetDishesAsync(idRestaurant);
             var dishesList = mapper.Map<IEnumerable<Dish>>(dishesEntities);
             foreach(Dish d in dishesList)

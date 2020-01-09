@@ -35,12 +35,6 @@ namespace Restaurante_Proyecto
             //Add EntityFramework support for SqlServer
             services.AddEntityFrameworkSqlServer();
             services.AddAutoMapper(typeof(Startup));
-            services.AddCors(c =>
-            {
-                c.AddPolicy("AllowOrigin", options => {
-                    options.AllowAnyOrigin(); options.AllowAnyMethod(); options.AllowAnyHeader();
-                });
-            });
 
 
             //Add Application DbContext
@@ -61,11 +55,6 @@ namespace Restaurante_Proyecto
             {
                 app.UseHsts();
             }
-            app.UseCors(options =>
-            {
-                options.AllowAnyOrigin(); options.AllowAnyMethod(); options.AllowAnyHeader();
-            });
-
 
             app.UseHttpsRedirection();
             app.UseMvc();

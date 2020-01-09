@@ -26,7 +26,10 @@ namespace Restaurante_Proyecto.Controllers
         {
             try
             {
-                return Ok(await dishService.GetDishesAsync(restaurantId));
+                var dishesFromRestaurant = await dishService.GetDishesAsync(restaurantId);
+                if (!dishesFromRestaurant.Any())
+                    return BadRequest("No dishes have been registrated for this restaurant");
+                return Ok();
             }
             catch (Exception ex)
             {
