@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {}
+    "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {}
   },
   "projects": {
-    "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {
+    "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+        "projectUniqueName": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
         "projectName": "Restaurante_Proyecto",
-        "projectPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
-        "packagesPath": "C:\\Users\\Geraldine Galindo\\.nuget\\packages\\",
-        "outputPath": "D:\\Universidad\\Sexto_Semestre\\Tecnologias_Web\\C\\RestaurantProyectoFinal\\Restaurante_Proyecto\\Restaurante_Proyecto\\obj\\",
+        "projectPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\Restaurante_Proyecto.csproj",
+        "packagesPath": "C:\\Users\\wrami\\.nuget\\packages\\",
+        "outputPath": "D:\\6to Semestre\\Tecnologias Web\\Proyectos\\Final_Proyect\\RestaurantApi\\Restaurante_Proyecto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Geraldine Galindo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wrami\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -82,7 +82,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.4, )"
+              "version": "[2.2.0, )"
             }
           },
           "imports": [

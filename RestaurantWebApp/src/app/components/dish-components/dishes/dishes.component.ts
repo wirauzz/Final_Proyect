@@ -17,6 +17,7 @@ export class DishesComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe( params => this.dishService.getDishes(params['id']).subscribe(dishes => {
       this.dishes = dishes
+      console.log(this.dishes);
     }));
   }
 
