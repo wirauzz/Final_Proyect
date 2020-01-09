@@ -21,7 +21,8 @@ export class DishesComponent implements OnInit {
   }
 
   addDish(dish:Dish) { 
-    this.dishService.addDish(dish, this.idRestaurant).subscribe(dish => {
+    console.log(dish);
+    this.dishService.addDish(dish, this.route.snapshot.params['id']).subscribe(dish => {
       this.dishes.push(dish);
     });
   }

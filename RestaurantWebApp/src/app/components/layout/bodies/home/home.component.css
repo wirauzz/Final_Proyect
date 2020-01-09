@@ -1,3 +1,6 @@
+
+
+
 .add {
     width: 50%;
     display:inline-block;
@@ -40,3 +43,80 @@
 .carousel-caption {
     text-shadow: 2px 2px black;
 }
+
+
+
+/* --------Landing Page--------- */
+.home-inner {
+    background-image: url("/assets/images/Slides/banner-food.jpg");
+    height: 650px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  .caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  .caption h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    letter-spacing: .3rem;
+    text-shadow: .1rem .1rem .8rem black;
+  }
+  .caption h3 {
+    font-size: 2rem;
+    text-shadow: .1rem .1rem .5rem black;
+    padding-bottom: 1.6rem;
+  }
+
+/* -------- Restaurant Section ----------- */
+.narrow {
+    width: 75%;
+    margin: 1.5rem auto;
+    padding-top: 2rem;
+  }
+  .narrow h1 {
+    font-size:  2.4rem;
+  }
+  
+  .jumbotron {
+    margin-bottom: 0;
+    padding: 2rem 0 3.5rem;
+    border-radius: 0;
+  }
+  h3.heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.9rem;
+  }
+  .heading-underline {
+    width: 3rem;
+    height: .2rem;
+    background-color: #1ebba3;
+    margin: 0 auto 2rem;
+  }
+  .restaurant-item svg.svg-inline--fa {
+    color: #1ebba3;
+  }
+  .restaurant-item h3 {
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    padding-bottom: .4rem;
+  }
+  .restaurant-item p {
+    font-size: 1.1rem;
+  }
+  
+
+
+
+
+

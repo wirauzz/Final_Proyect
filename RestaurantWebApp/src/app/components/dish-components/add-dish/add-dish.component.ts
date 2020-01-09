@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
   selector: 'app-add-dish',
@@ -12,9 +13,8 @@ export class AddDishComponent implements OnInit {
   nationality:string;
   cost:number;
   size:string;
-  restaurantId:number;
   imagePath:String;
-  constructor() { }
+  constructor( private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
@@ -27,7 +27,7 @@ export class AddDishComponent implements OnInit {
       nationality: this.nationality,
       cost: this.cost,
       size:this.size,
-      restaurantId:this.restaurantId,
+      restaurantId:this.activatedRoute.snapshot.params['id'],
       imagePath:this.imagePath
     }
     this.addDish.emit(dish);

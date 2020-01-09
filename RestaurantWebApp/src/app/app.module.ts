@@ -20,6 +20,7 @@ import { HomeComponent } from './components/layout/bodies/home/home.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { BodyDishesComponent } from './components/layout/bodies/body-dishes/body-dishes.component';
+import { DishShowcaseComponent } from './components/layout/bodies/dish-showcase/dish-showcase.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { BodyDishesComponent } from './components/layout/bodies/body-dishes/body
     HomeComponent,
     FooterComponent,
     HomePageComponent,
-    BodyDishesComponent
+    BodyDishesComponent,
+    DishShowcaseComponent
   ],
   imports: [
     BrowserModule,
